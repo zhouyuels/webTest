@@ -6,6 +6,7 @@
 # @Description    :基础页面，父类。封装页面基础操作，所有页面均继承该页面
 
 from selenium  import webdriver
+from selenium.webdriver.support.select import Select
 from main.config.Browser import Browser
 import time
 
@@ -555,6 +556,70 @@ class BasicPage():
             getSliderVerifyCodeIcon(selector)
         """
         return self.findElementByJQuery(selector)
+
+    def selectByIndex(self, arg, index):
+        """
+        根据索引在select下拉框下选择选项，仅支持select元素
+
+        :Args:
+         - arg: select元素，可为Selector元素选择器，或WebElement元素
+         - index: 选项的索引，从0开始
+        :Usage:
+            selectByIndex(el,0)，selectByIndex('#id',1)
+        """
+        self.assertTagName("selectByIndex方法仅对select元素生效",arg,["select"])
+        assert isinstance(index,int),"index必须问大于0的整数"
+        if isinstance(arg,str):
+            el = self.findElementByJQuery(arg)
+            self.focus(el)
+            self.flash(el)
+            Select(el).select_by_index(index)
+        if isinstance(arg,webdriver.remote.webelement.WebElement):
+            self.focus(arg)
+            self.flash(arg)
+            Select(arg).select_by_index(index)
+
+    def selectByValue(self, arg, value):
+        """
+        根据value值在select下拉框下选择选项，仅支持select元素
+
+        :Args:
+         - arg: select元素，可为Selector元素选择器，或WebElement元素
+         - value: 选项中value的值
+        :Usage:
+            selectByIndex(el,"aaa")，selectByIndex('#id',"bbb")
+        """
+        self.assertTagName("selectByIndex方法仅对select元素生效",arg,["select"])
+        if isinstance(arg,str):
+            el = self.findElementByJQuery(arg)
+            self.focus(el)
+            self.flash(el)
+            Select(el).select_by_value(value)
+        if isinstance(arg,webdriver.remote.webelement.WebElement):
+            self.focus(arg)
+            self.flash(arg)
+            Select(arg).select_by_value(value)
+
+    def selectByText(self, arg, text):
+        """
+        根据value值在select下拉框下选择选项，仅支持select元素
+
+        :Args:
+         - arg: select元素，可为Selector元素选择器，或WebElement元素
+         - value: 选项中value的值
+        :Usage:
+            selectByIndex(el,"aaa")，selectByIndex('#id',"bbb")
+        """
+        self.assertTagName("selectByIndex方法仅对select元素生效",arg,["select"])
+        if isinstance(arg,str):
+            el = self.findElementByJQuery(arg)
+            self.focus(el)
+            self.flash(el)
+            Select(el).select_by_visible_text(text)
+        if isinstance(arg,webdriver.remote.webelement.WebElement):
+            self.focus(arg)
+            self.flash(arg)
+            Select(arg).select_by_visible_text(text)
 
     """----------------------------------------frame操作----------------------------------------------"""
 

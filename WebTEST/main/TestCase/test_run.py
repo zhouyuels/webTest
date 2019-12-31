@@ -6,6 +6,7 @@
 
 import main.pages.loginPage as loginPage
 import main.pages.input as input
+import time
 
 loginPage = loginPage.login()
 inputPage = input.input()
@@ -46,10 +47,13 @@ loginPage.click(table)
 loginPage.switchToFrame(["#mainFrame"])
 loginPage.click("span:contains('新的表单_测试')")
 loginPage.click("button.form-udata-add-span")
-loginPage.switchToWindowByName("云端应用自定义")
+loginPage.switchToWindowByName("新的表单_测试")
 
-
-# time.sleep(1)
+loginPage.type("label:contains(单行文本)+div>input","姓名")
+loginPage.selectByIndex("select",1)
+loginPage.selectByValue("select","2")
+loginPage.selectByText("select","选项1")
+time.sleep(1)
 loginPage.close()
 loginPage.quit()
 
