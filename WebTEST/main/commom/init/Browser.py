@@ -7,8 +7,8 @@
 
 import os
 from selenium import webdriver
-from main.config.Readconfig import Readconfig
-from main.config.globalvar import globalvar
+from main.config.readconfig import Readconfig
+from main.commom.init.globalvar import globalvar
 
 class Browser():
     """
@@ -16,7 +16,7 @@ class Browser():
     """
 
     path = os.path.split(os.path.realpath(__file__))[0]
-    setupPath = os.path.join(path, "SetUp.ini")
+    setupPath = os.path.join(path, "../../config/SetUp.ini")
     browser = Readconfig(setupPath).get_value("BROWSER","browser")
     if browser == "Ie":
         driver = webdriver.Ie(globalvar().DriverPath(browser))

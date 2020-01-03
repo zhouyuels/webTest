@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
 # -*- coding:utf-8 -*-
-# @FileName  :input.py
+# @FileName  :MainPage.py
 # @Time      :2019/12/5 18:07
 # @Author    :ZhouYue
 
 
 from main.pages.BasicPage import BasicPage
-class input(BasicPage):
+
+class mainPage(BasicPage):
 
     def qwe(self):
         print("123456789")

@@ -7,8 +7,10 @@
 
 from selenium  import webdriver
 from selenium.webdriver.support.select import Select
-from main.config.Browser import Browser
-import time
+from main.commom.init.Browser import Browser
+from main.commom.tools.JQmodel import JQModel
+from main.commom.tools.log import log
+import time,os
 
 class BasicPage():
     """
@@ -16,72 +18,113 @@ class BasicPage():
     """
 
     FIND_ELEMENT_TIMEOUT_IN_SECONDS = 5
+    """
+    查找元素默认超时时间
+    """
+
+    SWITCH_FRAME_TIMEOUT_IN_SECONDS = 10
+    """
+    切换fram默认超时时间
+    """
+
     FLASH_TIMES = 1
+    """
+    元素闪烁次数
+    """
+
     STYLE = "background: red; border: 2px solid red;"
+    """
+    元素高亮设置
+    """
+    logs = log.Log()
+    logger = logs.getlog()
 
     def __init__(self):
         self.driver = Browser().driver
 
     def openUrl(self,url):
-        """打开url地址"""
+        """
+        打开url地址
+        """
         self.driver.get(url)
         self.browserMax()
 
     def browserMax(self):
-        """窗口最大化"""
+        """
+        窗口最大化
+        """
         self.driver.maximize_window()
 
     def browserMin(self):
-        """窗口最小化"""
+        """
+        窗口最小化
+        """
         self.driver.minimize_window()
 
     def getUrl(self):
-        """获取页面url"""
+        """
+        获取页面url
+        """
         return self.driver.current_url
 
     def refresh(self):
-        """刷新页面"""
+        """
+        刷新页面
+        """
         self.driver.refresh()
 
     def forward(self):
-        """页面前进"""
+        """
+        页面前进
+        """
         self.driver.refresh()
 
     def back(self):
-        """返回上一页"""
+        """
+        返回上一页
+        """
         self.driver.back()
 
     def close(self):
-        """关闭浏览器"""
+        """
+        关闭浏览器
+        """
         self.driver.close()
 
     def quit(self):
-        """关闭浏览器并退出驱动"""
+        """
+        关闭浏览器并退出驱动
+        """
         self.driver.quit()
 
 
 
     """----------------------------------------元素操作----------------------------------------------"""
-    def executescript(self , js,*args):
-        """执行一段Js"""
-        # print('execute_script("%s",%s)'%(js,args))
+    def executescript(self,js,*args):
+        """
+        执行一段Js
+        """
+        JQModel().injectJQueryIfNeeded()
         return  self.driver.execute_script(js,*args)
 
+    def isElement(self, el):
+        """
+        判断是否为WebElement元素
+        """
+        assert isinstance(el, webdriver.remote.webelement.WebElement) , ("el参数类型错误，不是WebElement元素：%s" % el)
+
     def timeout(self , func,timeout_seconds,*args):
-        """超时处理"""
+        """
+        查找元素超时处理
+        """
         start_milli_time = int(time.time()*1000)
-        sleep_milli_time = 100
         timeout = timeout_seconds*1000
         while int(time.time()*1000) - start_milli_time <= timeout:
             els_list = func(*args)
-            time.sleep(float(sleep_milli_time/1000))
+            time.sleep(float(0.1))
             if len(els_list) != 0:
                 return els_list
         return  None
-
-    def isElement(self, el):
-        """判断是否为WebElement元素"""
-        assert isinstance(el, webdriver.remote.webelement.WebElement) , ("el参数类型错误，不是WebElement元素：%s" % el)
 
     def findElementByJQuery(self , selector, timeout_seconds = FIND_ELEMENT_TIMEOUT_IN_SECONDS):
         """
@@ -89,7 +132,7 @@ class BasicPage():
 
         :Args:
          - selector: 元素选择器
-         - timeout: 超时时间，默认没有
+         - timeout: 超时时间，默认5s
         :return:
             匹配的第一个WebElement元素
         :Usage:
@@ -124,7 +167,7 @@ class BasicPage():
 
         :Args:
          - selector: 元素选择器
-         - timeout: 超时时间，默认没有
+         - timeout: 超时时间，默认5s
         :return:
             匹配的第一个WebElement元素
         :Usage:
@@ -220,7 +263,7 @@ class BasicPage():
         try:
             self.executescript("arguments[0].focus();", el)
         except:
-            print("元素置为焦点错误")
+            self.logger.error("元素置为焦点错误")
 
     def flash(self , el ):
         """
@@ -338,19 +381,38 @@ class BasicPage():
         JQuery = '$("%s").removeAttr("%s")' % (selector,attrName)
         self.executescript(JQuery)
 
-    def removeAttributeByJs(self,el,attrName):
+    def removeAttributeByJs(self,arg,attrName):
         """
         通过Js删除元素的属性，第一个匹配的元素
 
         :Args:
-         - el: WebElement元素
+         - arg: WebElement元素，或selector选择器
          - attrName: 属性名称
         :Usage:
-            removeAttributeByJs(el,'style')
+            removeAttributeByJs(el,'style')，removeAttributeByJs("#id",'style')
         """
-        self.isElement(el)
-        Js = 'arguments[0].removeAttribute(arguments[1]);'
-        self.executescript(Js,el,attrName)
+        if isinstance(arg,str):
+            Js = 'document.querySelectorAll("%s")[0].removeAttribute("%s");' % (arg,attrName)
+            self.executescript(Js)
+        if isinstance(arg,webdriver.remote.webelement.WebElement):
+            Js = 'arguments[0].removeAttribute(arguments[1]);'
+            self.executescript(Js,arg,attrName)
+
+    def remove(self,arg):
+        """
+        通过Js删除元素，第一个匹配的元素
+
+        :Args:
+         - arg: WebElement元素，或selector选择器
+        :Usage:
+            remove(el)，remove("#id")
+        """
+        if isinstance(arg,str):
+            Js = 'var child = document.querySelectorAll("%s")[0];child.parentNode.removeChild(child);' % (arg)
+            self.executescript(Js)
+        if isinstance(arg,webdriver.remote.webelement.WebElement):
+            Js = 'arguments[0].parentNode.removeChild(arguments[1]);'
+            self.executescript(Js,arg,arg)
 
     def click(self,arg):
         """
@@ -391,7 +453,6 @@ class BasicPage():
         """
         if isinstance(arg,str):
             el = self.findElementByJQuery(arg)
-            print(el)
             Js = 'document.querySelectorAll("%s")[0].click();' % arg
             self.focus(el)
             self.flash(el)
@@ -625,8 +686,10 @@ class BasicPage():
 
     def switchMainFrame(self):
         """切换到最外层主页"""
+        self.logger.debug(f"正在切换至最外层frame/iframe")
         self.driver.switch_to.default_content()
-        print("已切换到最外层frame/iframe")
+        self.waitForPageLoad()
+        self.logger.debug("已切换到最外层frame/iframe")
 
     def switchToNextFrame(self,arg):
         """切换到下一层frame/iframe
@@ -637,18 +700,23 @@ class BasicPage():
             switchToNextFrame(arg)
         """
         self.assertTagName("要切换frame只能是iframe和frame元素",arg,["iframe","frame"])
+        self.logger.debug(f"正在切换至下一层frame/iframe")
         try:
             if isinstance(arg,str):
                 self.driver.switch_to.frame(self.findElementByJQuery(arg))
             if isinstance(arg, webdriver.remote.webelement.WebElement):
                 self.driver.switch_to.frame(arg)
-            print("已切换到frame:%s" % arg)
+            self.waitForPageLoad()
+            self.logger.debug("已切换到frame:%s" % arg)
         except Exception as e:
-            print("切换frame失败：%s" % e)
+            self.logger.error("切换frame失败：%s" % e)
 
     def switchToParentFrame(self):
         """切换到上一层的frame"""
+        self.logger.debug(f"正在切换至上一层frame/iframe")
         self.driver.switch_to.parent_frame()
+        self.waitForPageLoad()
+        self.logger.debug(f"已切换至上一层frame/iframe")
 
     def switchToFrame(self,frameList = None):
         """切换到指定的frame
@@ -659,6 +727,7 @@ class BasicPage():
             switchToFrame(["#frame1",".frame2",frame3]
         """
         assert isinstance(frameList,list) or frameList == None, "frameList必须为一个list或None"
+        self.logger.debug(f"正在切换至fram：{frameList}")
         if frameList == None or frameList == []:
             self.switchMainFrame()
         else:
@@ -668,28 +737,36 @@ class BasicPage():
                         self.driver.switch_to.frame(self.findElementByJQuery(frameList[i]))
                     if isinstance(frameList[i], webdriver.remote.webelement.WebElement):
                         self.driver.switch_to.frame(frameList[i])
-                    print("已切换到frame:%s" % frameList[i])
+                    self.waitForPageLoad()
+                    self.logger.debug("已切换到frame:%s" % frameList[i])
                 except Exception as e:
-                    print("切换frame失败：%s" % e)
+                    self.logger.error("切换frame失败：%s" % e)
 
     """----------------------------------------窗口操作----------------------------------------------"""
 
     def getTitle(self):
-        """获取窗口标题"""
+        """
+        获取窗口标题
+        """
         return self.driver.title
 
     def getHandle(self):
-        """"获取到当前页面的句柄"""
+        """"
+        获取到当前页面的句柄
+        """
         handle = self.driver.current_window_handle
         return handle
 
     def getHandles(self):
-        """"获取到当前所有页面的句柄"""
+        """"
+        获取到当前所有页面的句柄
+        """
         handles = self.driver.window_handles
         return handles
 
     def switchToWindowByHandle(self,handle):
-        """根据句柄切换到窗口
+        """
+        根据句柄切换到窗口
 
         :Args:
          - handle: 要切换到的窗口句柄
@@ -697,10 +774,11 @@ class BasicPage():
             switchToWindowByHandle(handle)
         """
         self.driver.switch_to.window(handle)
-        print(f"已经切换到窗口：{self.getTitle()}")
+        self.waitForPageLoad()
 
     def switchToWindowByName(self,windowName):
-        """根据窗口标题切换到窗口
+        """
+        根据窗口标题切换到窗口
 
         :Args:
          - windowName: 要切换到的窗口的标题文本或文本的一部分
@@ -709,21 +787,57 @@ class BasicPage():
         """
         handles = self.getHandles()
         for i in handles:
-            self.switchToWindowByHandle(i)
-            if windowName in self.getTitle():
-                 break
+            self.logger.debug(f"正在切换至窗口：{windowName}")
+            try:
+                self.switchToWindowByHandle(i)
+                if windowName in self.getTitle():
+                    self.waitForPageLoad()
+                    self.logger.debug(f"已经切换到窗口：{self.getTitle()}")
+                    return windowName
+            except Exception as e:
+                self.logger.error(f"切换到窗口失败：{self.getTitle()}")
+                return windowName
+        # raise Exception(f"未找到窗口：{windowName}")
 
     def switchToLastWindow(self):
-        """切换到最新的窗口"""
-        self.driver.switch_to.window(self.getHandles()[-1])
-        print(f"已经切换到窗口：{self.getTitle()}")
+        """
+        切换到最新的窗口
+        """
+        try:
+            self.driver.switch_to.window(self.getHandles()[-1])
+            self.waitForPageLoad()
+            self.logger.debug(f"已经切换到最新窗口：{self.getTitle()}")
+        except Exception as e:
+            self.logger.error(f"切换到窗口失败：{self.getTitle()}")
 
     def switchToFirstWindow(self):
-        """切换到第一个窗口"""
-        self.driver.switch_to.window(self.getHandles()[0])
-        print(f"已经切换到窗口：{self.getTitle()}")
+        """
+        切换到第一个窗口
+        """
+        try:
+            self.driver.switch_to.window(self.getHandles()[0])
+            self.waitForPageLoad()
+            self.logger.debug(f"已经切换到第一个窗口：{self.getTitle()}")
+        except Exception as e:
+            self.logger.error(f"切换到窗口失败：{self.getTitle()}")
 
+    """----------------------------------------窗口操作----------------------------------------------"""
+
+    def waitForPageLoad(self,timeoutInSeconds = SWITCH_FRAME_TIMEOUT_IN_SECONDS):
+        STR_READY_STATE = ''
+        time_start = time.time()
+        while STR_READY_STATE != 'complete':
+            self.logger.debug("加载中···")
+            time.sleep(0.01)
+            STR_READY_STATE = self.executescript('return document.readyState')
+            time_end = time.time()
+            if int(time_end - time_start) > timeoutInSeconds:
+                raise Exception(f"页面加载超时：{SWITCH_FRAME_TIMEOUT_IN_SECONDS}秒")
 
 
 if __name__ == "__main__":
-    aa = 123
+    run = BasicPage()
+    run.openUrl("https://testpro.formtalk.net/login.do")
+    run.executescript("'return document.readyState'")
+    run.close()
+    run.quit()

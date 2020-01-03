@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding:utf-8 -*-
-# @FileName  :Readconfig.py
+# @FileName  :readconfig.py
 # @Time      :2019/12/5 16:31
 # @Author    :ZhouYue
 # @Description    :操作配置ini文件

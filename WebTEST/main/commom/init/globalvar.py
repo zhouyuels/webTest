@@ -6,7 +6,12 @@
 # @Description    :设置全局变量
 
 import os
+from main.commom.tools.log import log
+
 class globalvar():
+
+    logs = log.Log()
+    logger = logs.getlog()
 
     def DriverPath(self,browser = "Ie"):
         """设置浏览器,默认为IE浏览器
@@ -24,15 +29,15 @@ class globalvar():
     def IeDriver(self):
         """设置浏览器为Ie浏览器"""
         dir_path = os.path.dirname(os.path.abspath(__file__))
-        DriverPath = os.path.abspath(os.path.join(dir_path, "..\drivers\IEDriverServer.exe"))
-        print('浏览器驱动为:', DriverPath)
+        DriverPath = os.path.abspath(os.path.join(dir_path, "..\..\drivers\IEDriverServer.exe"))
+        self.logger.debug(f'浏览器驱动为:{DriverPath}')
         return DriverPath
 
     def ChromeDriver(self):
         """设置浏览器为Chrome浏览器"""
         dir_path = os.path.dirname(os.path.abspath(__file__))
         DriverPath = os.path.abspath(os.path.join(dir_path, "..\drivers\chromedriver.exe"))
-        print('浏览器驱动为:', DriverPath)
+        self.logger.debug(f'浏览器驱动为:{DriverPath}')
         return DriverPath
 
 

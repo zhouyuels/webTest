@@ -4,22 +4,12 @@
 # @Time      :2019/12/9 14:47
 # @Author    :ZhouYue
 
-import main.pages.loginPage as loginPage
-import main.pages.input as input
+import main.pages.LoginPage as loginPage
+import main.pages.MainPage as input
 import time
 
-loginPage = loginPage.login()
-inputPage = input.input()
-
-
-loginPage.openUrl("https://testpro.formtalk.net/login.do")
-inputPage.browserMax()
-name_str = "input[name=loginName]:visible"
-pd_str = 'input[name=loginPassword]:visible'
-ok_str = 'input#doLogin:visible'
-name_el = inputPage.findElementByJQuery(name_str)
-pd_el = inputPage.findElementByJQuery(pd_str)
-ok_el = inputPage.findElementByJQuery(ok_str)
+loginPage = loginPage.loginPage()
+inputPage = input.mainPage()
 
 
 # print("窗口标题为：",loginPage.getTitle())
@@ -33,25 +23,19 @@ ok_el = inputPage.findElementByJQuery(ok_str)
 # loginPage.setAttribute(name_str,"style","background: red; border: 2px solid red")
 # print("按钮value属性值为：",loginPage.getAttribute(name_str,"style"))
 
+loginPage.loginUrl("https://testpro.formtalk.net/login.do")
+"""登录"""
+loginPage.login("18502827849","123456")
 
-
-loginPage.type(name_str, "18502827849")
-loginPage.typeByJs(pd_el, "123456")
-inputPage.moveSlider("span.verifyCode-icon","span.labelTip")
-inputPage.clickByJs(ok_el)
-
-
-table = loginPage.findElementByJQuery("div[title='表单中心']:visible")
-loginPage.click(table)
-
+loginPage.click("div[title='表单中心']")
 loginPage.switchToFrame(["#mainFrame"])
 loginPage.click("span:contains('新的表单_测试')")
 loginPage.click("button.form-udata-add-span")
 loginPage.switchToWindowByName("新的表单_测试")
 
 loginPage.type("label:contains(单行文本)+div>input","姓名")
-loginPage.selectByIndex("select",1)
-loginPage.selectByValue("select","2")
+# loginPage.selectByIndex("select",1)
+# loginPage.selectByValue("select","2")
 loginPage.selectByText("select","选项1")
 time.sleep(1)
 loginPage.close()
