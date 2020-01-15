@@ -5,9 +5,9 @@
 # @Author    :ZhouYue
 # @Description    :基础页面，父类。封装页面基础操作，所有页面均继承该页面
 
+from main.commom.init.Browser import Browser
 from selenium  import webdriver
 from selenium.webdriver.support.select import Select
-from main.commom.init.Browser import Browser
 from main.commom.tools.JQmodel import JQModel
 from main.commom.tools.log import log
 import time,os
@@ -40,7 +40,10 @@ class BasicPage():
     logger = logs.getlog()
 
     def __init__(self):
+        # self.driver = driver
         self.driver = Browser().driver
+        # self.driver = Browser().getDriver()
+        # self.driver = webdriver.Ie(r'E:\automation_git\FormTalk\WebTEST\main\drivers\IEDriverServer.exe')
 
     def openUrl(self,url):
         """
@@ -97,6 +100,31 @@ class BasicPage():
         """
         self.driver.quit()
 
+    def get_command_executor(self):
+        """
+        command_executor 为命令执行器，它用于指定脚本执行的主机及端口
+        """
+        return  self.driver.command_executor._url
+
+    def get_session_id(self):
+        """
+        获取浏览器的session_id
+        """
+        return  self.driver.session_id
+
+    def remote(self,command_executor):
+        """
+        重新打开已使用但未关闭驱动（quit）的浏览器
+        """
+        driver = webdriver.Remote(command_executor = command_executor)
+        return driver
+
+    def setDriver(self,command_executor):
+        """
+        重置driver
+        """
+        driver = webdriver.Remote(command_executor = command_executor)
+        return driver
 
 
     """----------------------------------------元素操作----------------------------------------------"""
@@ -263,7 +291,7 @@ class BasicPage():
         try:
             self.executescript("arguments[0].focus();", el)
         except:
-            self.logger.error("元素置为焦点错误")
+            self.logger.error("元素置为焦点错误 ")
 
     def flash(self , el ):
         """
@@ -686,10 +714,10 @@ class BasicPage():
 
     def switchMainFrame(self):
         """切换到最外层主页"""
-        self.logger.debug(f"正在切换至最外层frame/iframe")
+        self.logger.debug(f"正在切换至最外层frame/iframe ")
         self.driver.switch_to.default_content()
         self.waitForPageLoad()
-        self.logger.debug("已切换到最外层frame/iframe")
+        self.logger.debug("已切换到最外层frame/iframe ")
 
     def switchToNextFrame(self,arg):
         """切换到下一层frame/iframe
@@ -700,23 +728,23 @@ class BasicPage():
             switchToNextFrame(arg)
         """
         self.assertTagName("要切换frame只能是iframe和frame元素",arg,["iframe","frame"])
-        self.logger.debug(f"正在切换至下一层frame/iframe")
+        self.logger.debug(f"正在切换至下一层frame/iframe ")
         try:
             if isinstance(arg,str):
                 self.driver.switch_to.frame(self.findElementByJQuery(arg))
             if isinstance(arg, webdriver.remote.webelement.WebElement):
                 self.driver.switch_to.frame(arg)
             self.waitForPageLoad()
-            self.logger.debug("已切换到frame:%s" % arg)
+            self.logger.debug("已切换到frame:%s " % arg)
         except Exception as e:
-            self.logger.error("切换frame失败：%s" % e)
+            self.logger.error("切换frame失败：%s " % e)
 
     def switchToParentFrame(self):
         """切换到上一层的frame"""
-        self.logger.debug(f"正在切换至上一层frame/iframe")
+        self.logger.debug(f"正在切换至上一层frame/iframe ")
         self.driver.switch_to.parent_frame()
         self.waitForPageLoad()
-        self.logger.debug(f"已切换至上一层frame/iframe")
+        self.logger.debug(f"已切换至上一层frame/iframe ")
 
     def switchToFrame(self,frameList = None):
         """切换到指定的frame
@@ -727,7 +755,7 @@ class BasicPage():
             switchToFrame(["#frame1",".frame2",frame3]
         """
         assert isinstance(frameList,list) or frameList == None, "frameList必须为一个list或None"
-        self.logger.debug(f"正在切换至fram：{frameList}")
+        self.logger.debug(f"正在切换至fram：{frameList} ")
         if frameList == None or frameList == []:
             self.switchMainFrame()
         else:
@@ -738,9 +766,9 @@ class BasicPage():
                     if isinstance(frameList[i], webdriver.remote.webelement.WebElement):
                         self.driver.switch_to.frame(frameList[i])
                     self.waitForPageLoad()
-                    self.logger.debug("已切换到frame:%s" % frameList[i])
+                    self.logger.debug("已切换到frame:%s " % frameList[i])
                 except Exception as e:
-                    self.logger.error("切换frame失败：%s" % e)
+                    self.logger.error("切换frame失败：%s " % e)
 
     """----------------------------------------窗口操作----------------------------------------------"""
 
@@ -787,15 +815,15 @@ class BasicPage():
         """
         handles = self.getHandles()
         for i in handles:
-            self.logger.debug(f"正在切换至窗口：{windowName}")
+            self.logger.debug(f"正在切换至窗口：{windowName} ")
             try:
                 self.switchToWindowByHandle(i)
                 if windowName in self.getTitle():
                     self.waitForPageLoad()
-                    self.logger.debug(f"已经切换到窗口：{self.getTitle()}")
+                    self.logger.debug(f"已经切换到窗口：{self.getTitle()} ")
                     return windowName
             except Exception as e:
-                self.logger.error(f"切换到窗口失败：{self.getTitle()}")
+                self.logger.error(f"切换到窗口失败：{self.getTitle()} ")
                 return windowName
         # raise Exception(f"未找到窗口：{windowName}")
 
@@ -806,9 +834,9 @@ class BasicPage():
         try:
             self.driver.switch_to.window(self.getHandles()[-1])
             self.waitForPageLoad()
-            self.logger.debug(f"已经切换到最新窗口：{self.getTitle()}")
+            self.logger.debug(f"已经切换到最新窗口：{self.getTitle()} ")
         except Exception as e:
-            self.logger.error(f"切换到窗口失败：{self.getTitle()}")
+            self.logger.error(f"切换到窗口失败：{self.getTitle()} ")
 
     def switchToFirstWindow(self):
         """
@@ -817,9 +845,9 @@ class BasicPage():
         try:
             self.driver.switch_to.window(self.getHandles()[0])
             self.waitForPageLoad()
-            self.logger.debug(f"已经切换到第一个窗口：{self.getTitle()}")
+            self.logger.debug(f"已经切换到第一个窗口：{self.getTitle()} ")
         except Exception as e:
-            self.logger.error(f"切换到窗口失败：{self.getTitle()}")
+            self.logger.error(f"切换到窗口失败：{self.getTitle()} ")
 
     """----------------------------------------窗口操作----------------------------------------------"""
 
@@ -827,7 +855,7 @@ class BasicPage():
         STR_READY_STATE = ''
         time_start = time.time()
         while STR_READY_STATE != 'complete':
-            self.logger.debug("加载中···")
+            self.logger.debug("加载中··· ")
             time.sleep(0.01)
             STR_READY_STATE = self.executescript('return document.readyState')
             time_end = time.time()
@@ -837,7 +865,7 @@ class BasicPage():
 
 if __name__ == "__main__":
     run = BasicPage()
-    run.openUrl("https://testpro.formtalk.net/login.do")
+    run.openUrl("https://testpro.formtalk.net/login.do ")
     run.executescript("'return document.readyState'")
     run.close()
     run.quit()

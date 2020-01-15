@@ -17,17 +17,41 @@ class Browser():
 
     path = os.path.split(os.path.realpath(__file__))[0]
     setupPath = os.path.join(path, "../../config/SetUp.ini")
-    browser = Readconfig(setupPath).get_value("BROWSER","browser")
+    browser = Readconfig(setupPath).get_value("BROWSER", "browser")
     if browser == "Ie":
         driver = webdriver.Ie(globalvar().DriverPath(browser))
-        # driver.implicitly_wait(5)
-    elif browser == "Chrome":
+    if browser == "Chrome":
         driver = webdriver.Chrome(globalvar().DriverPath(browser))
-        # driver.implicitly_wait(5)
+
+    # def __init__(self):
+    #     path = os.path.split(os.path.realpath(__file__))[0]
+    #     setupPath = os.path.join(path, "../../config/SetUp.ini")
+    #     self.browser = Readconfig(setupPath).get_value("BROWSER","browser")
 
     def getDriver(self):
         """取得driver实例"""
-        return self.driver
+        return Browser.driver
+
+    def setDriver(self):
+        """重新设置driver实例"""
+        if Browser.browser == "Ie":
+            driver = self.Ie()
+        if Browser.browser == "Chrome":
+            driver = self.Chrome()
+        Browser.driver = driver
+
+
+    def Ie(self):
+        """启动Ie"""
+        driver = webdriver.Ie(globalvar().DriverPath("Ie"))
+        # driver.implicitly_wait(5)
+        return driver
+
+    def Chrome(self):
+        """启动Chrome"""
+        driver = webdriver.Chrome(globalvar().DriverPath("Chrome"))
+        # driver.implicitly_wait(5)
+        return driver
 
 
 if __name__ == "__main__":

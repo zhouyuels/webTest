@@ -11,6 +11,8 @@ class loginPage(BasicPage):
     登录页面
     """
 
+    URL = "https://pro.formtalk.net/login.do"
+
     VERIFY_CODE_ICON = "span.verifyCode-icon"
     """验证码按钮"""
 
@@ -29,7 +31,7 @@ class loginPage(BasicPage):
     ok = 'input#doLogin'
     """登录按钮"""
 
-    def loginUrl(self,url):
+    def loginUrl(self,url = URL):
         """
 
         打开登录页面
@@ -44,9 +46,10 @@ class loginPage(BasicPage):
         :param user: 用户名
         :param pd: 密码
         """
+        self.loginUrl()
         self.editLoginInfo(user,pd)
         self.click(self.ok)
-        self.logger.debug(f"登录完成")
+        self.logger.debug(f"登录完成 ")
 
     def editLoginInfo(self,user,pd):
         """
@@ -55,7 +58,7 @@ class loginPage(BasicPage):
         :param user: 用户名
         :param pd: 密码
         """
-        self.logger.debug(f"使用用户：[{user}]进行登录")
+        self.logger.debug(f"使用用户：[{user}]进行登录 ")
         self.type(self.name, user)
         self.type(self.pd, pd)
         self.moveSlider(self.VERIFY_CODE_ICON,self.LABEL_TIP)

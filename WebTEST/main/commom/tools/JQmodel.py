@@ -44,7 +44,7 @@ class JQModel():
                                 'script.setAttribute("src","https://code.jquery.com/jquery-1.9.1.js");'
                                 'script.setAttribute("type","text/JavaScript");'
                                 'bod.appendChild(script)')
-        print("往页面未注入JQuery")
+        print("往页面注入JQuery")
 
 
 

@@ -29,3 +29,280 @@
 2020-01-03 18:08:55,705 - Logs - DEBUG - 加载中···
 2020-01-03 18:08:55,856 - Logs - DEBUG - 加载中···
 2020-01-03 18:08:55,985 - Logs - DEBUG - 已经切换到窗口：新的表单_测试
+2020-01-11 16:37:55,665 - Logs - DEBUG - 浏览器驱动为:E:\automation_git\FormTalk\WebTEST\main\drivers\IEDriverServer.exe
+2020-01-11 16:37:58,444 - Logs - DEBUG - 使用用户：[18502827849]进行登录
+2020-01-11 16:38:08,536 - Logs - DEBUG - 登录完成
+2020-01-11 17:01:24,655 - Logs - DEBUG - 浏览器驱动为:E:\automation_git\FormTalk\WebTEST\main\drivers\IEDriverServer.exe
+2020-01-11 17:01:27,199 - Logs - DEBUG - 使用用户：[18502827849]进行登录
+2020-01-11 17:01:35,025 - Logs - DEBUG - 登录完成
+2020-01-11 17:01:52,775 - Logs - DEBUG - 浏览器驱动为:E:\automation_git\FormTalk\WebTEST\main\drivers\IEDriverServer.exe
+2020-01-11 17:01:55,245 - Logs - DEBUG - 使用用户：[18502827849]进行登录
+2020-01-11 17:02:03,769 - Logs - DEBUG - 登录完成
+2020-01-11 17:02:05,532 - Logs - DEBUG - 正在切换至fram：['#mainFrame']
+2020-01-11 17:02:05,882 - Logs - DEBUG - 加载中···
+2020-01-11 17:02:05,983 - Logs - DEBUG - 已切换到frame:#mainFrame
+2020-01-11 17:02:09,756 - Logs - DEBUG - 正在切换至窗口：新的表单_测试
+2020-01-11 17:02:09,939 - Logs - DEBUG - 加载中···
+2020-01-11 17:02:10,103 - Logs - DEBUG - 正在切换至窗口：新的表单_测试
+2020-01-11 17:02:10,293 - Logs - DEBUG - 加载中···
+2020-01-11 17:02:40,548 - Logs - DEBUG - 浏览器驱动为:E:\automation_git\FormTalk\WebTEST\main\drivers\IEDriverServer.exe
+2020-01-11 17:02:43,162 - Logs - DEBUG - 使用用户：[18502827849]进行登录
+2020-01-11 17:02:51,040 - Logs - DEBUG - 登录完成
+2020-01-11 17:02:53,554 - Logs - DEBUG - 正在切换至fram：['#mainFrame']
+2020-01-11 17:02:53,887 - Logs - DEBUG - 加载中···
+2020-01-11 17:02:53,969 - Logs - DEBUG - 已切换到frame:#mainFrame
+2020-01-11 17:02:57,489 - Logs - DEBUG - 正在切换至窗口：新的表单_测试
+2020-01-11 17:02:57,681 - Logs - DEBUG - 加载中···
+2020-01-11 17:02:57,846 - Logs - DEBUG - 正在切换至窗口：新的表单_测试
+2020-01-11 17:02:58,025 - Logs - DEBUG - 加载中···
+2020-01-11 17:05:41,124 - Logs - DEBUG - 浏览器驱动为:E:\automation_git\FormTalk\WebTEST\main\drivers\IEDriverServer.exe
+2020-01-11 17:05:43,670 - Logs - DEBUG - 使用用户：[18502827849]进行登录
+2020-01-11 17:05:51,559 - Logs - DEBUG - 登录完成
+2020-01-11 17:07:06,223 - Logs - DEBUG - 浏览器驱动为:E:\automation_git\FormTalk\WebTEST\main\drivers\IEDriverServer.exe
+2020-01-11 17:07:08,670 - Logs - DEBUG - 使用用户：[18502827849]进行登录
+2020-01-11 17:07:16,106 - Logs - DEBUG - 登录完成
+2020-01-11 17:07:44,395 - Logs - DEBUG - 浏览器驱动为:E:\automation_git\FormTalk\WebTEST\main\drivers\IEDriverServer.exe
+2020-01-11 17:07:47,109 - Logs - DEBUG - 使用用户：[18502827849]进行登录
+2020-01-11 17:07:55,338 - Logs - DEBUG - 登录完成
+2020-01-11 17:08:58,360 - Logs - DEBUG - 浏览器驱动为:E:\automation_git\FormTalk\WebTEST\main\drivers\IEDriverServer.exe
+2020-01-11 17:09:00,766 - Logs - DEBUG - 使用用户：[18502827849]进行登录
+2020-01-11 17:09:08,601 - Logs - DEBUG - 登录完成
+2020-01-11 17:09:10,910 - Logs - DEBUG - 正在切换至fram：['#mainFrame']
+2020-01-11 17:09:11,225 - Logs - DEBUG - 加载中···
+2020-01-11 17:09:11,325 - Logs - DEBUG - 已切换到frame:#mainFrame
+2020-01-11 17:09:14,957 - Logs - DEBUG - 正在切换至窗口：新的表单_测试
+2020-01-11 17:09:15,152 - Logs - DEBUG - 加载中···
+2020-01-11 17:09:15,317 - Logs - DEBUG - 正在切换至窗口：新的表单_测试
+2020-01-11 17:09:15,496 - Logs - DEBUG - 加载中···
+2020-01-11 17:09:15,660 - Logs - DEBUG - 加载中···
+2020-01-11 17:09:15,810 - Logs - DEBUG - 已经切换到窗口：新的表单_测试
+2020-01-11 17:10:54,059 - Logs - DEBUG - 浏览器驱动为:E:\automation_git\FormTalk\WebTEST\main\drivers\IEDriverServer.exe
+2020-01-11 17:10:56,585 - Logs - DEBUG - 使用用户：[18502827849]进行登录
+2020-01-11 17:11:04,313 - Logs - DEBUG - 登录完成
+2020-01-11 17:11:06,714 - Logs - DEBUG - 正在切换至fram：['#mainFrame']
+2020-01-11 17:11:07,010 - Logs - DEBUG - 加载中···
+2020-01-11 17:11:07,116 - Logs - DEBUG - 已切换到frame:#mainFrame
+2020-01-11 17:11:10,715 - Logs - DEBUG - 正在切换至窗口：新的表单_测试
+2020-01-11 17:11:10,912 - Logs - DEBUG - 加载中···
+2020-01-11 17:11:11,079 - Logs - DEBUG - 正在切换至窗口：新的表单_测试
+2020-01-11 17:11:11,261 - Logs - DEBUG - 加载中···
+2020-01-11 17:11:11,422 - Logs - DEBUG - 加载中···
+2020-01-11 17:11:11,573 - Logs - DEBUG - 已经切换到窗口：新的表单_测试
+2020-01-11 17:15:53,724 - Logs - DEBUG - 浏览器驱动为:E:\automation_git\FormTalk\WebTEST\main\drivers\IEDriverServer.exe
+2020-01-11 17:17:21,937 - Logs - DEBUG - 浏览器驱动为:E:\automation_git\FormTalk\WebTEST\main\drivers\IEDriverServer.exe
+2020-01-11 17:17:26,026 - Logs - DEBUG - 使用用户：[18502827849]进行登录
+2020-01-11 17:17:34,026 - Logs - DEBUG - 登录完成
+2020-01-11 17:17:36,399 - Logs - DEBUG - 正在切换至fram：['#mainFrame']
+2020-01-11 17:17:36,701 - Logs - DEBUG - 加载中···
+2020-01-11 17:17:36,825 - Logs - DEBUG - 已切换到frame:#mainFrame
+2020-01-11 17:17:40,746 - Logs - DEBUG - 正在切换至窗口：新的表单_测试
+2020-01-11 17:17:40,940 - Logs - DEBUG - 加载中···
+2020-01-11 17:17:41,107 - Logs - DEBUG - 正在切换至窗口：新的表单_测试
+2020-01-11 17:17:41,288 - Logs - DEBUG - 加载中···
+2020-01-11 17:17:41,452 - Logs - DEBUG - 加载中···
+2020-01-11 17:17:41,620 - Logs - DEBUG - 已经切换到窗口：新的表单_测试
+2020-01-11 17:17:52,010 - Logs - DEBUG - 使用用户：[18502827849]进行登录
+2020-01-11 17:18:01,079 - Logs - DEBUG - 登录完成
+2020-01-11 17:18:21,123 - Logs - DEBUG - 浏览器驱动为:E:\automation_git\FormTalk\WebTEST\main\drivers\IEDriverServer.exe
+2020-01-11 17:18:25,085 - Logs - DEBUG - 使用用户：[18502827849]进行登录
+2020-01-11 17:18:32,835 - Logs - DEBUG - 登录完成
+2020-01-11 17:18:35,021 - Logs - DEBUG - 正在切换至fram：['#mainFrame']
+2020-01-11 17:18:35,310 - Logs - DEBUG - 加载中···
+2020-01-11 17:18:35,436 - Logs - DEBUG - 已切换到frame:#mainFrame
+2020-01-11 17:18:39,494 - Logs - DEBUG - 正在切换至窗口：新的表单_测试
+2020-01-11 17:18:39,688 - Logs - DEBUG - 加载中···
+2020-01-11 17:18:39,862 - Logs - DEBUG - 正在切换至窗口：新的表单_测试
+2020-01-11 17:18:40,042 - Logs - DEBUG - 加载中···
+2020-01-11 17:19:04,620 - Logs - DEBUG - 浏览器驱动为:E:\automation_git\FormTalk\WebTEST\main\drivers\IEDriverServer.exe
+2020-01-11 17:19:08,518 - Logs - DEBUG - 使用用户：[18502827849]进行登录
+2020-01-11 17:19:16,844 - Logs - DEBUG - 登录完成
+2020-01-11 17:19:23,355 - Logs - DEBUG - 使用用户：[18502827849]进行登录
+2020-01-11 17:19:31,650 - Logs - DEBUG - 登录完成
+2020-01-11 17:19:46,742 - Logs - DEBUG - 浏览器驱动为:E:\automation_git\FormTalk\WebTEST\main\drivers\IEDriverServer.exe
+2020-01-11 17:19:50,681 - Logs - DEBUG - 使用用户：[18502827849]进行登录
+2020-01-11 17:19:59,376 - Logs - DEBUG - 登录完成
+2020-01-11 17:23:31,423 - Logs - DEBUG - 浏览器驱动为:E:\automation_git\FormTalk\WebTEST\main\drivers\IEDriverServer.exe
+2020-01-11 17:23:35,293 - Logs - DEBUG - 使用用户：[18502827849]进行登录
+2020-01-11 17:23:43,000 - Logs - DEBUG - 登录完成
+2020-01-11 17:31:13,130 - Logs - DEBUG - 浏览器驱动为:E:\automation_git\FormTalk\WebTEST\main\drivers\IEDriverServer.exe
+2020-01-11 17:31:15,580 - Logs - DEBUG - 使用用户：[18502827849]进行登录
+2020-01-11 17:31:23,056 - Logs - DEBUG - 登录完成
+2020-01-11 17:31:31,818 - Logs - DEBUG - 浏览器驱动为:E:\automation_git\FormTalk\WebTEST\main\drivers\IEDriverServer.exe
+2020-01-11 17:31:34,214 - Logs - DEBUG - 使用用户：[18502827849]进行登录
+2020-01-11 17:31:42,292 - Logs - DEBUG - 登录完成
+2020-01-11 17:32:49,157 - Logs - DEBUG - 浏览器驱动为:E:\automation_git\FormTalk\WebTEST\main\drivers\IEDriverServer.exe
+2020-01-11 17:32:51,524 - Logs - DEBUG - 使用用户：[18502827849]进行登录
+2020-01-11 17:32:59,048 - Logs - DEBUG - 登录完成
+2020-01-11 17:46:47,678 - Logs - DEBUG - 浏览器驱动为:E:\automation_git\FormTalk\WebTEST\main\drivers\IEDriverServer.exe
+2020-01-11 17:46:50,122 - Logs - DEBUG - 使用用户：[18502827849]进行登录
+2020-01-11 17:46:58,152 - Logs - DEBUG - 登录完成
+2020-01-11 17:47:00,549 - Logs - DEBUG - 使用用户：[18502827849]进行登录
+2020-01-11 17:47:08,947 - Logs - DEBUG - 登录完成
+2020-01-11 17:48:46,975 - Logs - DEBUG - 浏览器驱动为:E:\automation_git\FormTalk\WebTEST\main\drivers\IEDriverServer.exe
+2020-01-11 17:48:49,382 - Logs - DEBUG - 使用用户：[18502827849]进行登录
+2020-01-11 17:48:56,805 - Logs - DEBUG - 登录完成
+2020-01-11 17:49:38,131 - Logs - DEBUG - 浏览器驱动为:E:\automation_git\FormTalk\WebTEST\main\drivers\IEDriverServer.exe
+2020-01-11 17:49:40,442 - Logs - DEBUG - 使用用户：[18502827849]进行登录
+2020-01-11 17:49:47,914 - Logs - DEBUG - 登录完成
+2020-01-11 17:55:53,967 - Logs - DEBUG - 浏览器驱动为:E:\automation_git\FormTalk\WebTEST\main\drivers\IEDriverServer.exe
+2020-01-11 17:55:56,439 - Logs - DEBUG - 使用用户：[18502827849]进行登录
+2020-01-11 17:56:03,796 - Logs - DEBUG - 登录完成
+2020-01-15 11:11:40,205 - Logs - DEBUG - 浏览器驱动为:E:\automation_git\FormTalk\WebTEST\main\drivers\IEDriverServer.exe
+2020-01-15 11:11:42,960 - Logs - DEBUG - 使用用户：[18502827849]进行登录
+2020-01-15 11:11:50,561 - Logs - DEBUG - 登录完成
+2020-01-15 11:13:47,716 - Logs - DEBUG - 浏览器驱动为:E:\automation_git\FormTalk\WebTEST\main\drivers\IEDriverServer.exe
+2020-01-15 11:13:50,017 - Logs - DEBUG - 使用用户：[18502827849]进行登录
+2020-01-15 11:13:58,069 - Logs - DEBUG - 登录完成
+2020-01-15 11:18:54,527 - Logs - DEBUG - 浏览器驱动为:E:\automation_git\FormTalk\WebTEST\main\drivers\IEDriverServer.exe
+2020-01-15 11:18:56,940 - Logs - DEBUG - 使用用户：[18502827849]进行登录
+2020-01-15 11:19:04,863 - Logs - DEBUG - 登录完成
+2020-01-15 11:22:22,930 - Logs - DEBUG - 浏览器驱动为:E:\automation_git\FormTalk\WebTEST\main\drivers\IEDriverServer.exe
+2020-01-15 11:22:25,331 - Logs - DEBUG - 使用用户：[18502827849]进行登录
+2020-01-15 11:22:33,313 - Logs - DEBUG - 登录完成
+2020-01-15 11:22:53,364 - Logs - DEBUG - 浏览器驱动为:E:\automation_git\FormTalk\WebTEST\main\drivers\IEDriverServer.exe
+2020-01-15 11:22:55,729 - Logs - DEBUG - 使用用户：[18502827849]进行登录
+2020-01-15 11:23:03,669 - Logs - DEBUG - 登录完成
+2020-01-15 14:18:00,029 - Logs - DEBUG - 浏览器驱动为:E:\automation_git\FormTalk\WebTEST\main\drivers\IEDriverServer.exe
+2020-01-15 14:18:02,659 - Logs - DEBUG - 使用用户：[18502827849]进行登录
+2020-01-15 14:18:10,332 - Logs - DEBUG - 登录完成
+2020-01-15 14:46:32,673 - Logs - DEBUG - 浏览器驱动为:E:\automation_git\FormTalk\WebTEST\main\drivers\IEDriverServer.exe
+2020-01-15 14:46:35,104 - Logs - DEBUG - 使用用户：[18502827849]进行登录
+2020-01-15 14:46:43,384 - Logs - DEBUG - 登录完成
+2020-01-15 14:46:50,059 - Logs - DEBUG - 浏览器驱动为:E:\automation_git\FormTalk\WebTEST\main\drivers\IEDriverServer.exe
+2020-01-15 14:46:52,640 - Logs - DEBUG - 使用用户：[18502827849]进行登录
+2020-01-15 14:47:01,031 - Logs - DEBUG - 登录完成
+2020-01-15 15:16:38,150 - Logs - DEBUG - 浏览器驱动为:E:\automation_git\FormTalk\WebTEST\main\drivers\IEDriverServer.exe
+2020-01-15 15:16:40,743 - Logs - DEBUG - 使用用户：[18502827849]进行登录
+2020-01-15 15:17:07,607 - Logs - DEBUG - 浏览器驱动为:E:\automation_git\FormTalk\WebTEST\main\drivers\IEDriverServer.exe
+2020-01-15 15:17:11,305 - Logs - DEBUG - 使用用户：[18502827849]进行登录
+2020-01-15 15:17:21,212 - Logs - DEBUG - 登录完成
+2020-01-15 15:31:49,276 - Logs - DEBUG - 浏览器驱动为:E:\automation_git\FormTalk\WebTEST\main\drivers\IEDriverServer.exe
+2020-01-15 15:31:50,888 - Logs - INFO - 【***********START TEST***********】
+2020-01-15 15:31:51,876 - Logs - DEBUG - 使用用户：[18502827849]进行登录
+2020-01-15 15:32:00,711 - Logs - DEBUG - 登录完成
+2020-01-15 15:32:01,967 - Logs - INFO - 【***********END TEST***********】
+2020-01-15 15:40:27,974 - Logs - DEBUG - 浏览器驱动为:E:\automation_git\FormTalk\WebTEST\main\drivers\IEDriverServer.exe
+2020-01-15 15:40:29,952 - Logs - INFO - 【***********START TEST***********】
+2020-01-15 15:40:30,893 - Logs - DEBUG - 使用用户：[18502827849]进行登录
+2020-01-15 15:40:38,778 - Logs - DEBUG - 登录完成
+2020-01-15 15:40:44,868 - Logs - INFO - 【***********END TEST***********】
+2020-01-15 15:41:13,308 - Logs - DEBUG - 浏览器驱动为:E:\automation_git\FormTalk\WebTEST\main\drivers\IEDriverServer.exe
+2020-01-15 15:41:14,866 - Logs - INFO - 【***********START TEST***********】
+2020-01-15 15:41:15,751 - Logs - DEBUG - 使用用户：[18502827849]进行登录
+2020-01-15 15:41:24,465 - Logs - DEBUG - 登录完成
+2020-01-15 15:41:25,754 - Logs - INFO - 【***********END TEST***********】
+2020-01-15 15:43:43,151 - Logs - DEBUG - 浏览器驱动为:E:\automation_git\FormTalk\WebTEST\main\drivers\IEDriverServer.exe
+2020-01-15 15:43:44,711 - Logs - INFO - 【***********START TEST***********】
+2020-01-15 15:43:46,367 - Logs - DEBUG - 使用用户：[18502827849]进行登录
+2020-01-15 15:43:55,293 - Logs - DEBUG - 登录完成
+2020-01-15 15:43:56,486 - Logs - DEBUG - 使用用户：[18502827849]进行登录
+2020-01-15 15:44:02,612 - Logs - INFO - 【***********END TEST***********】
+2020-01-15 15:45:30,669 - Logs - DEBUG - 浏览器驱动为:E:\automation_git\FormTalk\WebTEST\main\drivers\IEDriverServer.exe
+2020-01-15 15:45:32,264 - Logs - INFO - 【***********START TEST***********】
+2020-01-15 15:45:33,157 - Logs - DEBUG - 使用用户：[18502827849]进行登录
+2020-01-15 15:45:41,976 - Logs - DEBUG - 登录完成
+2020-01-15 15:45:43,105 - Logs - DEBUG - 使用用户：[18502827849]进行登录
+2020-01-15 15:45:49,146 - Logs - INFO - 【***********END TEST***********】
+2020-01-15 15:54:49,215 - Logs - DEBUG - 浏览器驱动为:E:\automation_git\FormTalk\WebTEST\main\drivers\IEDriverServer.exe
+2020-01-15 15:54:50,770 - Logs - INFO - 【***********START TEST***********】
+2020-01-15 15:54:51,688 - Logs - DEBUG - 使用用户：[18502827849]进行登录 
+2020-01-15 15:55:00,466 - Logs - DEBUG - 登录完成 
+2020-01-15 15:55:01,575 - Logs - DEBUG - 使用用户：[18502827849]进行登录 
+2020-01-15 15:55:07,775 - Logs - INFO - 【***********END TEST***********】
+2020-01-15 15:59:54,361 - Logs - DEBUG - 浏览器驱动为:E:\automation_git\FormTalk\WebTEST\main\drivers\IEDriverServer.exe
+2020-01-15 15:59:55,995 - Logs - INFO - 【***********START TEST***********】
+2020-01-15 15:59:56,907 - Logs - DEBUG - 使用用户：[18502827849]进行登录 
+2020-01-15 16:00:05,840 - Logs - DEBUG - 登录完成 
+2020-01-15 16:00:06,945 - Logs - DEBUG - 使用用户：[18502827849]进行登录 
+2020-01-15 16:00:13,142 - Logs - INFO - 【***********END TEST***********】
+2020-01-15 16:01:40,271 - Logs - DEBUG - 浏览器驱动为:E:\automation_git\FormTalk\WebTEST\main\drivers\IEDriverServer.exe
+2020-01-15 16:01:41,869 - Logs - INFO - 【***********START TEST***********】
+2020-01-15 16:01:42,824 - Logs - DEBUG - 使用用户：[18502827849]进行登录 
+2020-01-15 16:01:51,653 - Logs - DEBUG - 登录完成 
+2020-01-15 16:01:52,855 - Logs - DEBUG - 使用用户：[18502827849]进行登录 
+2020-01-15 16:01:58,886 - Logs - INFO - 【***********END TEST***********】
+2020-01-15 16:04:55,858 - Logs - DEBUG - 浏览器驱动为:E:\automation_git\FormTalk\WebTEST\main\drivers\IEDriverServer.exe
+2020-01-15 16:04:57,508 - Logs - INFO - 【***********START TEST***********】
+2020-01-15 16:04:58,409 - Logs - DEBUG - 使用用户：[18502827849]进行登录 
+2020-01-15 16:05:07,153 - Logs - DEBUG - 登录完成 
+2020-01-15 16:05:19,841 - Logs - INFO - 【***********END TEST***********】
+2020-01-15 16:05:45,237 - Logs - DEBUG - 浏览器驱动为:E:\automation_git\FormTalk\WebTEST\main\drivers\IEDriverServer.exe
+2020-01-15 16:05:46,797 - Logs - INFO - 【***********START TEST***********】
+2020-01-15 16:05:47,743 - Logs - DEBUG - 使用用户：[18502827849]进行登录 
+2020-01-15 16:05:56,466 - Logs - DEBUG - 登录完成 
+2020-01-15 16:06:09,001 - Logs - INFO - 【***********END TEST***********】
+2020-01-15 16:07:41,340 - Logs - DEBUG - 浏览器驱动为:E:\automation_git\FormTalk\WebTEST\main\drivers\IEDriverServer.exe
+2020-01-15 16:07:42,913 - Logs - INFO - 【***********START TEST***********】
+2020-01-15 16:07:43,780 - Logs - DEBUG - 使用用户：[18502827849]进行登录 
+2020-01-15 16:24:25,824 - Logs - DEBUG - 浏览器驱动为:E:\automation_git\FormTalk\WebTEST\main\drivers\IEDriverServer.exe
+2020-01-15 16:24:27,374 - Logs - INFO - 【***********START TEST***********】
+2020-01-15 16:24:28,306 - Logs - DEBUG - 使用用户：[18502827849]进行登录 
+2020-01-15 16:24:37,051 - Logs - DEBUG - 登录完成 
+2020-01-15 16:24:38,561 - Logs - INFO - 【***********END TEST***********】
+2020-01-15 16:47:16,368 - Logs - DEBUG - 浏览器驱动为:E:\automation_git\FormTalk\WebTEST\main\drivers\IEDriverServer.exe
+2020-01-15 16:47:19,534 - Logs - DEBUG - 使用用户：[18502827849]进行登录 
+2020-01-15 16:50:46,471 - Logs - DEBUG - 浏览器驱动为:E:\automation_git\FormTalk\WebTEST\main\drivers\IEDriverServer.exe
+2020-01-15 16:50:49,614 - Logs - DEBUG - 使用用户：[18502827849]进行登录 
+2020-01-15 16:50:49,615 - Logs - DEBUG - 浏览器驱动为:E:\automation_git\FormTalk\WebTEST\main\drivers\IEDriverServer.exe
+2020-01-15 16:50:51,481 - Logs - DEBUG - 浏览器驱动为:E:\automation_git\FormTalk\WebTEST\main\drivers\IEDriverServer.exe
+2020-01-15 16:50:56,706 - Logs - DEBUG - 浏览器驱动为:E:\automation_git\FormTalk\WebTEST\main\drivers\IEDriverServer.exe
+2020-01-15 16:50:58,561 - Logs - DEBUG - 浏览器驱动为:E:\automation_git\FormTalk\WebTEST\main\drivers\IEDriverServer.exe
+2020-01-15 16:51:00,438 - Logs - DEBUG - 浏览器驱动为:E:\automation_git\FormTalk\WebTEST\main\drivers\IEDriverServer.exe
+2020-01-15 16:51:02,186 - Logs - DEBUG - 浏览器驱动为:E:\automation_git\FormTalk\WebTEST\main\drivers\IEDriverServer.exe
+2020-01-15 16:51:03,995 - Logs - DEBUG - 浏览器驱动为:E:\automation_git\FormTalk\WebTEST\main\drivers\IEDriverServer.exe
+2020-01-15 16:53:13,651 - Logs - DEBUG - 浏览器驱动为:E:\automation_git\FormTalk\WebTEST\main\drivers\IEDriverServer.exe
+2020-01-15 16:53:16,868 - Logs - DEBUG - 使用用户：[18502827849]进行登录 
+2020-01-15 16:59:03,618 - Logs - DEBUG - 浏览器驱动为:E:\automation_git\FormTalk\WebTEST\main\drivers\IEDriverServer.exe
+2020-01-15 16:59:06,822 - Logs - DEBUG - 使用用户：[18502827849]进行登录 
+2020-01-15 17:00:27,122 - Logs - DEBUG - 浏览器驱动为:E:\automation_git\FormTalk\WebTEST\main\drivers\IEDriverServer.exe
+2020-01-15 17:00:30,377 - Logs - DEBUG - 使用用户：[18502827849]进行登录 
+2020-01-15 19:37:11,516 - Logs - DEBUG - 浏览器驱动为:E:\automation_git\FormTalk\WebTEST\main\drivers\IEDriverServer.exe
+2020-01-15 19:38:05,272 - Logs - DEBUG - 浏览器驱动为:E:\automation_git\FormTalk\WebTEST\main\drivers\IEDriverServer.exe
+2020-01-15 19:38:45,398 - Logs - DEBUG - 浏览器驱动为:E:\automation_git\FormTalk\WebTEST\main\drivers\IEDriverServer.exe
+2020-01-15 19:39:37,267 - Logs - DEBUG - 浏览器驱动为:E:\automation_git\FormTalk\WebTEST\main\drivers\IEDriverServer.exe
+2020-01-15 19:39:41,089 - Logs - DEBUG - 使用用户：[18502827849]进行登录 
+2020-01-15 19:39:50,251 - Logs - DEBUG - 登录完成 
+2020-01-15 19:40:24,135 - Logs - DEBUG - 浏览器驱动为:E:\automation_git\FormTalk\WebTEST\main\drivers\IEDriverServer.exe
+2020-01-15 19:40:27,225 - Logs - DEBUG - 使用用户：[18502827849]进行登录 
+2020-01-15 19:40:35,023 - Logs - DEBUG - 登录完成 
+2020-01-15 19:40:52,813 - Logs - DEBUG - 浏览器驱动为:E:\automation_git\FormTalk\WebTEST\main\drivers\IEDriverServer.exe
+2020-01-15 19:40:55,779 - Logs - DEBUG - 使用用户：[18502827849]进行登录 
+2020-01-15 19:41:04,293 - Logs - DEBUG - 登录完成 
+2020-01-15 19:43:18,411 - Logs - DEBUG - 浏览器驱动为:E:\automation_git\FormTalk\WebTEST\main\drivers\IEDriverServer.exe
+2020-01-15 19:43:21,544 - Logs - DEBUG - 使用用户：[18502827849]进行登录 
+2020-01-15 19:43:30,144 - Logs - DEBUG - 登录完成 
+2020-01-15 19:54:38,484 - Logs - DEBUG - 浏览器驱动为:E:\automation_git\FormTalk\WebTEST\main\drivers\IEDriverServer.exe
+2020-01-15 19:55:37,855 - Logs - DEBUG - 浏览器驱动为:E:\automation_git\FormTalk\WebTEST\main\drivers\IEDriverServer.exe
+2020-01-15 19:56:10,597 - Logs - DEBUG - 浏览器驱动为:E:\automation_git\FormTalk\WebTEST\main\drivers\IEDriverServer.exe
+2020-01-15 19:56:33,494 - Logs - DEBUG - 浏览器驱动为:E:\automation_git\FormTalk\WebTEST\main\drivers\IEDriverServer.exe
+2020-01-15 19:57:33,428 - Logs - DEBUG - 浏览器驱动为:E:\automation_git\FormTalk\WebTEST\main\drivers\IEDriverServer.exe
+2020-01-15 20:10:21,339 - Logs - DEBUG - 浏览器驱动为:E:\automation_git\FormTalk\WebTEST\main\drivers\IEDriverServer.exe
+2020-01-15 20:10:24,579 - Logs - DEBUG - 使用用户：[18502827849]进行登录 
+2020-01-15 20:10:33,007 - Logs - DEBUG - 登录完成 
+2020-01-15 20:11:59,327 - Logs - DEBUG - 浏览器驱动为:E:\automation_git\FormTalk\WebTEST\main\drivers\IEDriverServer.exe
+2020-01-15 20:12:01,744 - Logs - DEBUG - 使用用户：[18502827849]进行登录 
+2020-01-15 20:12:10,147 - Logs - DEBUG - 登录完成 
+2020-01-15 20:13:17,569 - Logs - DEBUG - 浏览器驱动为:E:\automation_git\FormTalk\WebTEST\main\drivers\IEDriverServer.exe
+2020-01-15 20:13:19,947 - Logs - DEBUG - 使用用户：[18502827849]进行登录 
+2020-01-15 20:13:28,533 - Logs - DEBUG - 登录完成 
+2020-01-15 20:13:32,776 - Logs - DEBUG - 浏览器驱动为:E:\automation_git\FormTalk\WebTEST\main\drivers\IEDriverServer.exe
+2020-01-15 20:14:47,645 - Logs - DEBUG - 浏览器驱动为:E:\automation_git\FormTalk\WebTEST\main\drivers\IEDriverServer.exe
+2020-01-15 20:14:50,168 - Logs - DEBUG - 使用用户：[18502827849]进行登录 
+2020-01-15 20:14:58,011 - Logs - DEBUG - 登录完成 
+2020-01-15 20:15:02,244 - Logs - DEBUG - 浏览器驱动为:E:\automation_git\FormTalk\WebTEST\main\drivers\IEDriverServer.exe
+2020-01-15 20:15:04,614 - Logs - DEBUG - 使用用户：[18502827849]进行登录 
+2020-01-15 20:15:13,112 - Logs - DEBUG - 登录完成 
+2020-01-15 20:17:52,562 - Logs - DEBUG - 浏览器驱动为:E:\automation_git\FormTalk\WebTEST\main\drivers\IEDriverServer.exe
+2020-01-15 20:17:54,107 - Logs - INFO - 【***********START TEST***********】
+2020-01-15 20:17:54,108 - Logs - DEBUG - 浏览器驱动为:E:\automation_git\FormTalk\WebTEST\main\drivers\IEDriverServer.exe
+2020-01-15 20:17:56,476 - Logs - DEBUG - 使用用户：[18502827849]进行登录 
+2020-01-15 20:18:05,310 - Logs - DEBUG - 登录完成 
+2020-01-15 20:18:09,776 - Logs - INFO - 【***********END TEST***********】
+2020-01-15 20:20:51,031 - Logs - DEBUG - 浏览器驱动为:E:\automation_git\FormTalk\WebTEST\main\drivers\IEDriverServer.exe
+2020-01-15 20:20:52,535 - Logs - INFO - 【***********START TEST***********】
+2020-01-15 20:20:53,533 - Logs - DEBUG - 使用用户：[18502827849]进行登录 
+2020-01-15 20:21:01,954 - Logs - DEBUG - 登录完成 
+2020-01-15 20:21:05,429 - Logs - DEBUG - 浏览器驱动为:E:\automation_git\FormTalk\WebTEST\main\drivers\IEDriverServer.exe
+2020-01-15 20:21:07,802 - Logs - DEBUG - 使用用户：[18502827849]进行登录 
+2020-01-15 20:21:16,147 - Logs - DEBUG - 登录完成 
+2020-01-15 20:21:20,624 - Logs - INFO - 【***********END TEST***********】
