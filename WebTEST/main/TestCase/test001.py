@@ -5,48 +5,65 @@
 # @Author    :ZhouYue
 # @Description    :
 
-import unittest,json,time, traceback
-from main.commom.tools.log import log
+import unittest
+import main.TestCase.testBase as testBase
 import main.pages.LoginPage as login
-import warnings
 from main.commom.init.Browser import Browser
 # from common.keywords import decorator
 
 
-class Login(unittest.TestCase):
-    """云台控制：云台旋转"""
+class Login(testBase.testBase):
+    """登录测试"""
 
-    logs = log.Log()
-    logger = logs.getlog()
-
-    @classmethod
-    def setUpClass(cls):
-        """终端鉴权上线"""
-        warnings.simplefilter("ignore", ResourceWarning)
-        Login.logger.info(u"【***********START TEST***********】")
-
-    @classmethod
-    def tearDownClass(cls):
-        time.sleep(1)
-        Login.logger.info(u"【***********END TEST***********】")
-
-    def test_01(self):
-        """case_id:1"""
+    def test01_Success(self):
+        """正确登录"""
         loginPage = login.loginPage()
         loginPage.login("18502827849", "123456")
-        shouye = loginPage.findElementByJQuery("div[title='首页']")
-        loginPage.quit()
-        self.assertIsNotNone(shouye)
+        msg = loginPage.findElementByJQuery("div[title='首页']")
+        self.assertIsNotNone(msg)
 
-    def test_02(self):
-        """case_id:2"""
-        Browser().setDriver()
+    def test02_NameError(self):
+        """用户名错误，密码正确"""
         loginPage = login.loginPage()
-        loginPage.login("18502827849", "123456")
-        shixiang = loginPage.findElementByJQuery("div[title='我的事项']")
-        loginPage.quit()
-        self.assertIsNotNone(shixiang)
+        loginPage.login("18502827848", "123456")
+        error = loginPage.getTest("#login_error")
+        self.assertEqual(error , "用户名或密码错误","用户名错误提示")
 
+    def test03_PdError(self):
+        """用户名正确，密码错误"""
+        loginPage = login.loginPage()
+        loginPage.login("18502827849", "1234567")
+        error = loginPage.getTest("#login_error")
+        self.assertEqual(error , "用户名或密码错误","密码错误提示")
+
+    def test04_NamePdError(self):
+        """用户名、密码错误"""
+        loginPage = login.loginPage()
+        loginPage.login("18502827848", "1234567")
+        error = loginPage.getTest("#login_error")
+        self.assertEqual(error , "用户名或密码错误","用户、密码错误提示")
+
+    def test05_phoneError(self):
+        """手机号错误"""
+        loginPage = login.loginPage()
+        loginPage.login("12345678901", "1234567")
+        error = loginPage.getTest("#login_error")
+        self.assertEqual(error , "请输入正确的手机号码","非手机号数字提示")
+        loginPage.login("asdf5678901", "1234567")
+        error = loginPage.getTest("#login_error")
+        self.assertEqual(error , "请输入正确的手机号码","字符手机号提示")
+        loginPage.login("1850282784", "123456")
+        error = loginPage.getTest("#login_error")
+        self.assertEqual(error , "请输入正确的手机号码","手机号10位提示")
+        loginPage.login("185028278499", "123456")
+        error = loginPage.getTest("#login_error")
+        self.assertEqual(error , "请输入正确的手机号码","手机号12位提示")
+        loginPage.login("18502827849", "12345")
+        error = loginPage.getTest("#login_error")
+        self.assertEqual(error , "至少6个字符","至少6个字符")
+        loginPage.login("18502827849", "1234567890123456789012345678901")
+        error = loginPage.getTest("#login_error")
+        self.assertEqual(error , "最多30个字符","最多30个字符")
 
 if __name__=='__main__':
     #执行所有用例

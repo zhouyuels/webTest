@@ -18,10 +18,10 @@ class Browser():
     path = os.path.split(os.path.realpath(__file__))[0]
     setupPath = os.path.join(path, "../../config/SetUp.ini")
     browser = Readconfig(setupPath).get_value("BROWSER", "browser")
-    if browser == "Ie":
-        driver = webdriver.Ie(globalvar().DriverPath(browser))
-    if browser == "Chrome":
-        driver = webdriver.Chrome(globalvar().DriverPath(browser))
+    # if browser == "Ie":
+    #     driver = webdriver.Ie(globalvar().DriverPath(browser))
+    # if browser == "Chrome":
+    #     driver = webdriver.Chrome(globalvar().DriverPath(browser))
 
     # def __init__(self):
     #     path = os.path.split(os.path.realpath(__file__))[0]

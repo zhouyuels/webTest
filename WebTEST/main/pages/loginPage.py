@@ -49,7 +49,11 @@ class loginPage(BasicPage):
         self.loginUrl()
         self.editLoginInfo(user,pd)
         self.click(self.ok)
-        self.logger.debug(f"登录完成 ")
+        window = self.getTitle()
+        if "云端应用自定义构建平台" in window:
+            loginPage.logger.debug(f"登录成功 ")
+        else:
+            loginPage.logger.error(f"登录失败")
 
     def editLoginInfo(self,user,pd):
         """
@@ -58,7 +62,7 @@ class loginPage(BasicPage):
         :param user: 用户名
         :param pd: 密码
         """
-        self.logger.debug(f"使用用户：[{user}]进行登录 ")
+        loginPage.logger.debug(f"使用用户：[{user}/{pd}]进行登录 ")
         self.type(self.name, user)
         self.type(self.pd, pd)
         self.moveSlider(self.VERIFY_CODE_ICON,self.LABEL_TIP)
