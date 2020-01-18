@@ -16,7 +16,7 @@ class Browser():
     """
 
     path = os.path.split(os.path.realpath(__file__))[0]
-    setupPath = os.path.join(path, "../../config/SetUp.ini")
+    setupPath = os.path.join(path, "../../config/configFile/SetUp.ini")
     browser = Readconfig(setupPath).get_value("BROWSER", "browser")
     # if browser == "Ie":
     #     driver = webdriver.Ie(globalvar().DriverPath(browser))

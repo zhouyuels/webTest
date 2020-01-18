@@ -25,7 +25,7 @@ class JQModel():
         :return:True/False
         """
         try:
-            from main.pages.BasicPage import BasicPage
+            from main.commom.base.BasicPage import BasicPage
             hasJQuery = Browser().driver.execute_script("return typeof jQuery == 'function';")
             if hasJQuery == False:
                 print("页面未注入JQuery")

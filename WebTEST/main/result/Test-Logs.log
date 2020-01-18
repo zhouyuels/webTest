@@ -456,3 +456,39 @@
 2020-01-16 17:45:29,321 - Logs - DEBUG - 使用用户：[18502827849/1234567890123456789012345678901]进行登录 
 2020-01-16 17:45:36,997 - Logs - ERROR - 登录失败
 2020-01-16 17:45:40,565 - Logs - INFO - 【**********************TEST END**********************】
+2020-01-18 11:14:42,083 - Logs - INFO - 【**********************TEST START**********************】
+2020-01-18 11:14:42,130 - Logs - DEBUG - 浏览器驱动为:E:\automation_git\FormTalk\WebTEST\main\drivers\IEDriverServer.exe
+2020-01-18 11:14:43,821 - Logs - INFO - 执行case:【正确登录】用例
+2020-01-18 11:14:45,226 - Logs - DEBUG - 使用用户：[18502827849/123456]进行登录 
+2020-01-18 11:14:52,748 - Logs - ERROR - 登录失败
+2020-01-18 11:15:01,041 - Logs - DEBUG - 浏览器驱动为:E:\automation_git\FormTalk\WebTEST\main\drivers\IEDriverServer.exe
+2020-01-18 11:15:02,483 - Logs - INFO - 执行case:【用户名错误，密码正确】用例
+2020-01-18 11:15:03,437 - Logs - DEBUG - 使用用户：[18502827848/123456]进行登录 
+2020-01-18 11:15:10,449 - Logs - ERROR - 登录失败
+2020-01-18 11:15:11,409 - Logs - DEBUG - 使用用户：[12345678901/1234567]进行登录 
+2020-01-18 11:15:18,115 - Logs - ERROR - 登录失败
+2020-01-18 11:15:19,049 - Logs - DEBUG - 使用用户：[asdf5678901/1234567]进行登录 
+2020-01-18 11:15:25,906 - Logs - ERROR - 登录失败
+2020-01-18 11:15:26,804 - Logs - DEBUG - 使用用户：[1850282784/123456]进行登录 
+2020-01-18 11:15:33,615 - Logs - ERROR - 登录失败
+2020-01-18 11:15:34,513 - Logs - DEBUG - 使用用户：[185028278499/123456]进行登录 
+2020-01-18 11:15:41,368 - Logs - ERROR - 登录失败
+2020-01-18 11:15:44,822 - Logs - DEBUG - 浏览器驱动为:E:\automation_git\FormTalk\WebTEST\main\drivers\IEDriverServer.exe
+2020-01-18 11:15:46,253 - Logs - INFO - 执行case:【用户名正确，密码错误】用例
+2020-01-18 11:15:47,129 - Logs - DEBUG - 使用用户：[18502827849/1234567]进行登录 
+2020-01-18 11:15:54,114 - Logs - ERROR - 登录失败
+2020-01-18 11:15:55,022 - Logs - DEBUG - 使用用户：[18502827849/12345]进行登录 
+2020-01-18 11:16:01,931 - Logs - ERROR - 登录失败
+2020-01-18 11:16:02,835 - Logs - DEBUG - 使用用户：[18502827849/1234567890123456789012345678901]进行登录 
+2020-01-18 11:16:09,847 - Logs - ERROR - 登录失败
+2020-01-18 11:16:13,276 - Logs - DEBUG - 浏览器驱动为:E:\automation_git\FormTalk\WebTEST\main\drivers\IEDriverServer.exe
+2020-01-18 11:16:14,693 - Logs - INFO - 执行case:【用户名、密码错误】用例
+2020-01-18 11:16:15,501 - Logs - DEBUG - 使用用户：[18502827848/1234567]进行登录 
+2020-01-18 11:16:22,581 - Logs - ERROR - 登录失败
+2020-01-18 11:16:26,038 - Logs - INFO - 【**********************TEST END**********************】
+2020-01-18 15:39:17,015 - Logs - INFO - 测试数据excle文档路径为：E:\automation_git\FormTalk\WebTEST\main\data\testdata.xlsx
+2020-01-18 15:39:33,790 - Logs - INFO - 测试数据excle文档路径为：E:\automation_git\FormTalk\WebTEST\main\data\testdata.xlsx
+2020-01-18 16:43:30,198 - Logs - INFO - 日志文件路径问：E:\automation_git\FormTalk\WebTEST\main\result
+2020-01-18 16:43:30,198 - Logs - INFO - 日志文件名称为：Test-Logs
+2020-01-18 16:43:37,659 - Logs - INFO - 日志文件路径问：E:\automation_git\FormTalk\WebTEST\main\result
+2020-01-18 16:43:37,660 - Logs - INFO - 日志文件名称为：Test-Logs

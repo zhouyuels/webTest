@@ -4,7 +4,7 @@
 # @Time      :2019/12/5 18:13
 # @Author    :ZhouYue
 
-from main.pages.BasicPage import BasicPage
+from main.commom.base.BasicPage import BasicPage
 
 class loginPage(BasicPage):
     """

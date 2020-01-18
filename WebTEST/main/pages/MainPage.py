@@ -5,7 +5,7 @@
 # @Author    :ZhouYue
 
 
-from main.pages.BasicPage import BasicPage
+from main.commom.base.BasicPage import BasicPage
 
 class mainPage(BasicPage):
 

@@ -17,7 +17,7 @@ class Log():
         初始化日志设置，通过读取日志配置文件初始化日志
         """
         """读取日志配置文件内容"""
-        self.path = os.path.abspath(os.path.join(os.path.abspath(__file__), "../../../../config/Log.ini"))
+        self.path = os.path.abspath(os.path.join(os.path.abspath(__file__), "../../../../config/configFile/Log.ini"))
         logging.config.fileConfig(self.path)
         """创建一个日志器logger"""
         self.logger = logging.getLogger('Logs')

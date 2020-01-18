@@ -16,7 +16,7 @@ class Logs_setup():
     """
     def __init__(self):
         """获取日志配置文件路径"""
-        self.path = os.path.abspath(os.path.join(os.path.abspath(__file__), "../../../../config/Log.ini"))
+        self.path = os.path.abspath(os.path.join(os.path.abspath(__file__), "../../../../config/configFile/Log.ini"))
         print(self.path)
 
     def set_logsName(self,log_path,logs_name):
