@@ -7,6 +7,7 @@
 
 from main.commom.init.Browser import Browser
 from selenium  import webdriver
+from selenium.webdriver import ActionChains
 from selenium.webdriver.support.select import Select
 from main.commom.tools.JQmodel import JQModel
 from main.commom.tools.log import log
@@ -620,7 +621,7 @@ class BasicPage():
             moveSlider("#id",".id")
         """
         if self.getSliderVerifyCodeIcon(Icon) and self.getLabelTip(LabelTip):
-            action = webdriver.ActionChains(self.driver)
+            action = ActionChains(self.driver)
             SliderVerifyCodeIcon = self.getSliderVerifyCodeIcon(Icon)
             action.drag_and_drop_by_offset(SliderVerifyCodeIcon ,self.Size(self.getLabelTip(LabelTip))["width"] ,0).perform()
             action.release().perform()
@@ -709,6 +710,46 @@ class BasicPage():
             self.focus(arg)
             self.flash(arg)
             Select(arg).select_by_visible_text(text)
+
+    def move(self, arg):
+        """
+        鼠标悬停到元素
+
+        :Args:
+         - arg: 可为Selector元素选择器，或WebElement元素
+        :Usage:
+            move(el)，move('#id')
+        """
+        if isinstance(arg,str):
+            el = self.findElementByJQuery(arg)
+            self.focus(el)
+            self.flash(el)
+            ActionChains(self.driver).move_to_element(el).perform()
+        if isinstance(arg,webdriver.remote.webelement.WebElement):
+            self.focus(arg)
+            self.flash(arg)
+            ActionChains(self.driver).move_to_element(arg).perform()
+
+    def moveByJs(self, arg):
+        """
+        鼠标悬停到元素
+
+        :Args:
+         - arg: 可为Selector元素选择器，或WebElement元素
+        :Usage:
+            moveByJs(el)，moveByJs('#id')
+        """
+        if isinstance(arg,str):
+            Js = 'return $("%s").mouseenter()' % arg
+            el = self.findElementByJQuery(arg)
+            self.focus(el)
+            self.flash(el)
+            self.executescript(Js)
+        if isinstance(arg,webdriver.remote.webelement.WebElement):
+            Js = '$(arguments[0]).mouseenter();'
+            self.focus(arg)
+            self.flash(arg)
+            self.executescript(Js,arg)
 
     """----------------------------------------frame操作----------------------------------------------"""
 

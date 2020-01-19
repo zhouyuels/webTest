@@ -15,6 +15,7 @@ class Login(testBase.testBase):
     """登录测试"""
 
     @decorator.Call_CaseName("【正确登录】用例")
+    @unittest.skipIf(False,"是否执行")
     def test01_Success(self):
         """正确登录"""
         loginPage = login.loginPage()
@@ -23,6 +24,7 @@ class Login(testBase.testBase):
         self.assertIsNotNone(msg)
 
     @decorator.Call_CaseName("【用户名错误，密码正确】用例")
+    @unittest.skipIf(True,"是否执行")
     def test02_NameError(self):
         """用户名错误，密码正确"""
         loginPage = login.loginPage()

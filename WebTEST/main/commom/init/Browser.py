@@ -9,20 +9,28 @@ import os
 from selenium import webdriver
 from main.config.readconfig import Readconfig
 from main.commom.init.globalvar import globalvar
+from main.commom.tools.log import log
 
 class Browser():
     """
     获取浏览器驱动
     """
 
+    logs = log.Log()
+    logger = logs.getlog()
     path = os.path.split(os.path.realpath(__file__))[0]
     setupPath = os.path.join(path, "../../config/configFile/SetUp.ini")
     browser = Readconfig(setupPath).get_value("BROWSER", "browser")
-    # if browser == "Ie":
-    #     driver = webdriver.Ie(globalvar().DriverPath(browser))
-    # if browser == "Chrome":
-    #     driver = webdriver.Chrome(globalvar().DriverPath(browser))
-
+    # try:
+    #     if browser == "Ie":
+    #         driver = webdriver.Ie(globalvar().DriverPath(browser))
+    #     if browser == "Chrome":
+    #         driver = webdriver.Chrome(globalvar().DriverPath(browser))
+    # except Exception as e:
+    #     logger.error("启动浏览器驱动错误")
+    #     raise
+    # else:
+    #     driver.quit()
     # def __init__(self):
     #     path = os.path.split(os.path.realpath(__file__))[0]
     #     setupPath = os.path.join(path, "../../config/SetUp.ini")
@@ -55,5 +63,5 @@ class Browser():
 
 
 if __name__ == "__main__":
-    aa =11
+    aa = Browser()
 

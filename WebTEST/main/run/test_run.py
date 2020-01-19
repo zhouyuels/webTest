@@ -12,7 +12,7 @@ from selenium import webdriver
 
 
 def test1():
-    # Browser().setDriver()
+    Browser().setDriver()
     print(Browser().driver)
     loginPage = login.loginPage()
 
@@ -41,14 +41,15 @@ def test1():
     # loginPage.selectByIndex("select",1)
     # loginPage.selectByValue("select","2")
     # loginPage.selectByText("select","选项1")
-    time.sleep(1)
+
+    loginPage.move(loginPage.findElementByJQuery("div[title='社会化招聘2.0']"))
+    loginPage.move("i[title='简历获取']")
+    loginPage.move("i[title='投递简历']")
+    loginPage.click("i[title='投递简历']")
+    time.sleep(5)
     loginPage.close()
     loginPage.quit()
 
-    Browser().setDriver()
-    loginPage = login.loginPage()
-    loginPage.login("18502827849","123456")
-    loginPage.quit()
 
 def test2():
     loginPage = login.loginPage()

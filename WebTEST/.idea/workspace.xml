@@ -10,14 +10,14 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/WebTEST$Browser.coverage" NAME="Browser Coverage Results" MODIFIED="1575870886055" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/main/config" />
-    <SUITE FILE_PATH="coverage/WebTEST$Unittests_in_test001_login_py.coverage" NAME="Unittests in test001_login.py Coverage Results" MODIFIED="1579338159829" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/main/TestCase" />
+    <SUITE FILE_PATH="coverage/WebTEST$Browser.coverage" NAME="Browser Coverage Results" MODIFIED="1579401481087" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/main/commom/init" />
+    <SUITE FILE_PATH="coverage/WebTEST$Unittests_in_test001_login_py.coverage" NAME="Unittests in test001_login.py Coverage Results" MODIFIED="1579401882063" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/main/TestCase" />
     <SUITE FILE_PATH="coverage/WebTEST$browser.coverage" NAME="browser Coverage Results" MODIFIED="1575539814867" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/main/config" />
     <SUITE FILE_PATH="coverage/WebTEST$test.coverage" NAME="test Coverage Results" MODIFIED="1575540741339" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/main/commom" />
     <SUITE FILE_PATH="coverage/WebTEST$run.coverage" NAME="run Coverage Results" MODIFIED="1579338377459" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/main/run" />
     <SUITE FILE_PATH="coverage/WebTEST$BasicPage.coverage" NAME="BasicPage Coverage Results" MODIFIED="1578043411428" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/main/pages" />
     <SUITE FILE_PATH="coverage/WebTEST$Unittests_for_test001_login_Login_test04_NamePdError.coverage" NAME="Unittests for test001_login.Login.test04_NamePdError Coverage Results" MODIFIED="1579337211262" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/main/TestCase" />
-    <SUITE FILE_PATH="coverage/WebTEST$test_run.coverage" NAME="test_run Coverage Results" MODIFIED="1577784637002" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/main/commom" />
+    <SUITE FILE_PATH="coverage/WebTEST$test_run.coverage" NAME="test_run Coverage Results" MODIFIED="1579417570048" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/main/run" />
     <SUITE FILE_PATH="coverage/WebTEST$test__1_.coverage" NAME="test (1) Coverage Results" MODIFIED="1575873961791" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/main/commom" />
     <SUITE FILE_PATH="coverage/WebTEST$test_run__1_.coverage" NAME="test_run (1) Coverage Results" MODIFIED="1579090487437" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/main/TestCase" />
     <SUITE FILE_PATH="coverage/WebTEST$Excel_Operation.coverage" NAME="Excel_Operation Coverage Results" MODIFIED="1579333173651" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/main/commom/tools" />
@@ -38,11 +38,9 @@
       <file leaf-file-name="test001_login.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main/TestCase/test001_login.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1650">
-              <caret line="69" column="0" lean-forward="false" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
-              <folding>
-                <element signature="e#150#165#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="-1129">
+              <caret line="26" column="25" lean-forward="false" selection-start-line="26" selection-start-column="25" selection-end-line="26" selection-end-column="25" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -57,22 +55,49 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Test-Logs.log" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main/result/Test-Logs.log">
-          <provider selected="true" editor-type-id="LogFileEditorProvider">
-            <state relative-caret-position="400">
-              <caret line="16" column="60" lean-forward="false" selection-start-line="16" selection-start-column="60" selection-end-line="16" selection-end-column="60" />
+      <file leaf-file-name="run.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main/run/run.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="531">
+              <caret line="54" column="45" lean-forward="false" selection-start-line="54" selection-start-column="43" selection-end-line="54" selection-end-column="45" />
+              <folding>
+                <element signature="e#147#161#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="run.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/main/run/run.py">
+      <file leaf-file-name="BasicPage.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/main/commom/base/BasicPage.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1256">
-              <caret line="54" column="45" lean-forward="false" selection-start-line="54" selection-start-column="43" selection-end-line="54" selection-end-column="45" />
+            <state relative-caret-position="1261">
+              <caret line="724" column="26" lean-forward="true" selection-start-line="724" selection-start-column="26" selection-end-line="724" selection-end-column="26" />
               <folding>
-                <element signature="e#147#161#0" expanded="true" />
+                <element signature="e#173#217#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test_run.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main/run/test_run.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="725">
+              <caret line="47" column="38" lean-forward="true" selection-start-line="47" selection-start-column="38" selection-end-line="47" selection-end-column="38" />
+              <folding>
+                <element signature="e#125#169#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Browser.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main/commom/init/Browser.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="46">
+              <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="32" selection-end-column="23" />
+              <folding>
+                <element signature="e#160#169#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -95,6 +120,7 @@
       <find>Debug</find>
       <find>Remote</find>
       <find>log</find>
+      <find>双击</find>
     </findStrings>
     <replaceStrings>
       <replace>self.logger.debug</replace>
@@ -141,11 +167,13 @@
         <option value="$PROJECT_DIR$/main/commom/tools/decorator.py" />
         <option value="$PROJECT_DIR$/main/commom/tools/Excel_Opreation.py" />
         <option value="$PROJECT_DIR$/main/commom/tools/Excel_Operation.py" />
-        <option value="$PROJECT_DIR$/main/TestCase/test001_login.py" />
         <option value="$PROJECT_DIR$/main/commom/tools/log/logs_setup.py" />
         <option value="$PROJECT_DIR$/main/commom/tools/log/log.py" />
-        <option value="$PROJECT_DIR$/main/commom/init/Browser.py" />
         <option value="$PROJECT_DIR$/main/run/run.py" />
+        <option value="$PROJECT_DIR$/main/TestCase/test001_login.py" />
+        <option value="$PROJECT_DIR$/main/commom/init/Browser.py" />
+        <option value="$PROJECT_DIR$/main/commom/base/BasicPage.py" />
+        <option value="$PROJECT_DIR$/main/run/test_run.py" />
       </list>
     </option>
   </component>
@@ -198,6 +226,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -209,6 +239,19 @@
               <item name="WebTEST" type="b2602c69:ProjectViewProjectNode" />
               <item name="WebTEST" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WebTEST" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WebTEST" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="commom" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WebTEST" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WebTEST" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="commom" type="462c0819:PsiDirectoryNode" />
+              <item name="base" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="WebTEST" type="b2602c69:ProjectViewProjectNode" />
@@ -252,8 +295,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -287,40 +328,21 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.run">
-    <configuration name="Excel_Operation" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.test_run">
+    <configuration name="Browser" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/main/commom/tools" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/main/commom/init" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="WebTEST" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main/commom/tools/Excel_Operation.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
-    <configuration name="logs_setup" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/main/commom/tools/log" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="WebTEST" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main/commom/tools/log/logs_setup.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main/commom/init/Browser.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -340,6 +362,25 @@
       <module name="WebTEST" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main/run/run.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="test_run" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/main/run" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="WebTEST" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main/run/test_run.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -377,18 +418,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python tests.Unittests in test001_login.py" />
-      <item index="1" class="java.lang.String" itemvalue="Python.Excel_Operation" />
-      <item index="2" class="java.lang.String" itemvalue="Python.run" />
-      <item index="3" class="java.lang.String" itemvalue="Python.logs_setup" />
-      <item index="4" class="java.lang.String" itemvalue="Python tests.Unittests for test001_login.Login.test04_NamePdError" />
+      <item index="1" class="java.lang.String" itemvalue="Python.run" />
+      <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests for test001_login.Login.test04_NamePdError" />
+      <item index="3" class="java.lang.String" itemvalue="Python.Browser" />
+      <item index="4" class="java.lang.String" itemvalue="Python.test_run" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.run" />
+        <item index="0" class="java.lang.String" itemvalue="Python.test_run" />
         <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests in test001_login.py" />
-        <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests for test001_login.Login.test04_NamePdError" />
-        <item index="3" class="java.lang.String" itemvalue="Python.logs_setup" />
-        <item index="4" class="java.lang.String" itemvalue="Python.Excel_Operation" />
+        <item index="2" class="java.lang.String" itemvalue="Python.Browser" />
+        <item index="3" class="java.lang.String" itemvalue="Python.run" />
+        <item index="4" class="java.lang.String" itemvalue="Python tests.Unittests for test001_login.Login.test04_NamePdError" />
       </list>
     </recent_temporary>
   </component>
@@ -409,16 +450,16 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_for_test001_login_Login_test04_NamePdError - 2020.01.18 at 16h 45m 10s.xml">
-      <configuration name="Unittests for test001_login.Login.test04_NamePdError" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_test001_login_Login_test04_NamePdError - 2020.01.18 at 16h 46m 51s.xml">
-      <configuration name="Unittests for test001_login.Login.test04_NamePdError" configurationId="tests" />
-    </history-entry>
     <history-entry file="Unittests_in_test001_login_py - 2020.01.18 at 11h 16m 26s.xml">
       <configuration name="Unittests in test001_login.py" configurationId="tests" />
     </history-entry>
     <history-entry file="Unittests_in_test001_login_py - 2020.01.18 at 17h 02m 53s.xml">
+      <configuration name="Unittests in test001_login.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_test001_login_py - 2020.01.19 at 10h 40m 53s.xml">
+      <configuration name="Unittests in test001_login.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_test001_login_py - 2020.01.19 at 10h 46m 24s.xml">
       <configuration name="Unittests in test001_login.py" configurationId="tests" />
     </history-entry>
     <history-entry file="Unittests_in_test001_py - 2020.01.16 at 17h 11m 05s.xml">
@@ -442,12 +483,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33755943" sideWeight="0.5058565" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33755943" sideWeight="0.4941435" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24722663" sideWeight="0.4941435" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19912152" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -473,20 +515,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="3" />
+      <option name="time" value="5" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://E:/python3/Lib/site-packages/selenium/webdriver/remote/utils.py" />
-    <entry file="file://E:/python3/Lib/json/encoder.py" />
-    <entry file="file://$USER_HOME$/.PyCharm2017.3/system/python_stubs/864055831/builtins.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2618">
-          <caret line="5112" column="8" lean-forward="false" selection-start-line="5112" selection-start-column="8" selection-end-line="5112" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://E:/python3/Lib/site-packages/selenium/webdriver/ie/webdriver.py" />
     <entry file="file://E:/python3/Lib/site-packages/selenium/webdriver/chrome/webdriver.py" />
     <entry file="file://$PROJECT_DIR$/main/commom/test_set.py" />
@@ -549,13 +582,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="149">
           <caret line="156" column="0" lean-forward="false" selection-start-line="156" selection-start-column="0" selection-end-line="156" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/Program_Files/python3/Lib/site-packages/selenium/webdriver/remote/webdriver.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="97" column="54" lean-forward="false" selection-start-line="97" selection-start-column="48" selection-end-line="97" selection-end-column="54" />
         </state>
       </provider>
     </entry>
@@ -629,13 +655,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main/run/test_run.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-32">
-          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="10" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://D:/Program_Files/python3/Lib/configparser.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="130">
@@ -658,13 +677,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main/commom/base/BasicPage.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://D:/Program_Files/python3/Lib/logging/config.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="122">
@@ -676,13 +688,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="122">
           <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/commom/init/Browser.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="18" column="59" lean-forward="false" selection-start-line="18" selection-start-column="59" selection-end-line="18" selection-end-column="59" />
         </state>
       </provider>
     </entry>
@@ -703,16 +708,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main/result/reporter_logs_2020-01-18_16-50-25/Test_report_2020-01-18_16-50-25.html" />
     <entry file="file://$PROJECT_DIR$/main/result/reporter_logs_2020-01-18_16-50-25/Test-Logs_2020-01-18_16-50-25.log" />
-    <entry file="file://$PROJECT_DIR$/main/TestCase/test001_login.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1650">
-          <caret line="69" column="0" lean-forward="false" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
-          <folding>
-            <element signature="e#150#165#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main/commom/tools/log/logs_setup.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="825">
@@ -729,16 +724,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main/run/run.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1256">
-          <caret line="54" column="45" lean-forward="false" selection-start-line="54" selection-start-column="43" selection-end-line="54" selection-end-column="45" />
-          <folding>
-            <element signature="e#147#161#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main/result/Test-Logs.log">
       <provider selected="true" editor-type-id="LogFileEditorProvider">
         <state relative-caret-position="400">
@@ -748,6 +733,88 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="250">
           <caret line="10" column="57" lean-forward="true" selection-start-line="10" selection-start-column="57" selection-end-line="10" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/run/run.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="531">
+          <caret line="54" column="45" lean-forward="false" selection-start-line="54" selection-start-column="43" selection-end-line="54" selection-end-column="45" />
+          <folding>
+            <element signature="e#147#161#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Program_Files/python3/Lib/site-packages/selenium/webdriver/ie/webdriver.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="30" column="15" lean-forward="false" selection-start-line="30" selection-start-column="6" selection-end-line="30" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Program_Files/python3/Lib/site-packages/selenium/webdriver/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-442">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#788#847#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2017.3/system/python_stubs/864055831/builtins.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6876">
+          <caret line="5186" column="8" lean-forward="false" selection-start-line="5186" selection-start-column="8" selection-end-line="5186" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/TestCase/test001_login.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1129">
+          <caret line="26" column="25" lean-forward="false" selection-start-line="26" selection-start-column="25" selection-end-line="26" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/commom/init/Browser.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="32" selection-end-column="23" />
+          <folding>
+            <element signature="e#160#169#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Program_Files/python3/Lib/site-packages/selenium/webdriver/remote/webdriver.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="635" column="0" lean-forward="false" selection-start-line="635" selection-start-column="0" selection-end-line="635" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/run/test_run.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="725">
+          <caret line="47" column="38" lean-forward="true" selection-start-line="47" selection-start-column="38" selection-end-line="47" selection-end-column="38" />
+          <folding>
+            <element signature="e#125#169#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/commom/base/BasicPage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1261">
+          <caret line="724" column="26" lean-forward="true" selection-start-line="724" selection-start-column="26" selection-end-line="724" selection-end-column="26" />
+          <folding>
+            <element signature="e#173#217#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
