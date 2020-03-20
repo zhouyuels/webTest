@@ -23,7 +23,7 @@ class BasicPage():
     查找元素默认超时时间
     """
 
-    SWITCH_FRAME_TIMEOUT_IN_SECONDS = 10
+    SWITCH_FRAME_TIMEOUT_IN_SECONDS = 15
     """
     切换fram默认超时时间
     """
@@ -37,6 +37,7 @@ class BasicPage():
     """
     元素高亮设置
     """
+
     logs = log.Log()
     logger = logs.getlog()
 
@@ -168,7 +169,7 @@ class BasicPage():
             findElementByJQuery('#id')
         """
         els_list = self.findElementsByJQuery(selector, timeout_seconds)
-        return els_list[0] if els_list != None else None
+        return els_list[0] if els_list != [] else None
 
     def findElementsByJQuery(self , selector, timeout_seconds):
         """
@@ -796,6 +797,7 @@ class BasicPage():
             switchToFrame(["#frame1",".frame2",frame3]
         """
         assert isinstance(frameList,list) or frameList == None, "frameList必须为一个list或None"
+        self.switchMainFrame()
         self.logger.debug(f"正在切换至fram：{frameList} ")
         if frameList == None or frameList == []:
             self.switchMainFrame()
@@ -806,7 +808,7 @@ class BasicPage():
                         self.driver.switch_to.frame(self.findElementByJQuery(frameList[i]))
                     if isinstance(frameList[i], webdriver.remote.webelement.WebElement):
                         self.driver.switch_to.frame(frameList[i])
-                    self.waitForPageLoad()
+                    # self.waitForPageLoad()
                     self.logger.debug("已切换到frame:%s " % frameList[i])
                 except Exception as e:
                     self.logger.error("切换frame失败：%s " % e)
@@ -855,18 +857,19 @@ class BasicPage():
             switchToWindowByName(windowName)
         """
         handles = self.getHandles()
+        # print(handles)
+        self.logger.debug(f"正在切换至窗口：{windowName} ")
         for i in handles:
-            self.logger.debug(f"正在切换至窗口：{windowName} ")
             try:
                 self.switchToWindowByHandle(i)
+                self.logger.debug(f"当前窗口：{self.getTitle()} ")
                 if windowName in self.getTitle():
                     self.waitForPageLoad()
                     self.logger.debug(f"已经切换到窗口：{self.getTitle()} ")
                     return windowName
             except Exception as e:
                 self.logger.error(f"切换到窗口失败：{self.getTitle()} ")
-                return windowName
-        # raise Exception(f"未找到窗口：{windowName}")
+                raise Exception(f"未找到窗口：{windowName}")
 
     def switchToLastWindow(self):
         """
@@ -878,6 +881,7 @@ class BasicPage():
             self.logger.debug(f"已经切换到最新窗口：{self.getTitle()} ")
         except Exception as e:
             self.logger.error(f"切换到窗口失败：{self.getTitle()} ")
+            raise()
 
     def switchToFirstWindow(self):
         """
@@ -889,6 +893,7 @@ class BasicPage():
             self.logger.debug(f"已经切换到第一个窗口：{self.getTitle()} ")
         except Exception as e:
             self.logger.error(f"切换到窗口失败：{self.getTitle()} ")
+            raise ()
 
     """----------------------------------------窗口操作----------------------------------------------"""
 
@@ -896,12 +901,12 @@ class BasicPage():
         STR_READY_STATE = ''
         time_start = time.time()
         while STR_READY_STATE != 'complete':
-            self.logger.debug("加载中··· ")
-            time.sleep(0.01)
+            self.logger.debug(f"加载中... ")
+            time.sleep(0.1)
             STR_READY_STATE = self.executescript('return document.readyState')
             time_end = time.time()
             if int(time_end - time_start) > timeoutInSeconds:
-                raise Exception(f"页面加载超时：{SWITCH_FRAME_TIMEOUT_IN_SECONDS}秒")
+                raise Exception(f"页面加载超时：{self.SWITCH_FRAME_TIMEOUT_IN_SECONDS}秒")
 
 
 if __name__ == "__main__":

@@ -31,12 +31,13 @@ class globalvar():
         dir_path = os.path.dirname(os.path.abspath(__file__))
         DriverPath = os.path.abspath(os.path.join(dir_path, "..\..\drivers\IEDriverServer.exe"))
         self.logger.debug(f'浏览器驱动为:{DriverPath}')
+        print(DriverPath)
         return DriverPath
 
     def ChromeDriver(self):
         """设置浏览器为Chrome浏览器"""
         dir_path = os.path.dirname(os.path.abspath(__file__))
-        DriverPath = os.path.abspath(os.path.join(dir_path, "..\drivers\chromedriver.exe"))
+        DriverPath = os.path.abspath(os.path.join(dir_path, "..\..\drivers\chromedriver.exe"))
         self.logger.debug(f'浏览器驱动为:{DriverPath}')
         return DriverPath
 

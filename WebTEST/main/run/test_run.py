@@ -6,10 +6,11 @@
 
 from main.commom.init.Browser import Browser
 import main.pages.LoginPage as login
-import main.pages.MainPage as input
+import main.pages.MainPage as Main
+# import main.pages.MainPage as input
 import time
 from selenium import webdriver
-
+from main.commom.tools.log import log
 
 def test1():
     Browser().setDriver()
@@ -29,7 +30,14 @@ def test1():
 
     """登录"""
     # loginPage.loginUrl("https://pro.formtalk.net/login.do")
-    loginPage.login("18502827849","123456")
+    loginPage.login("17111111111","123456")
+    # loginPage.click("div[title='自动化应用准备1_新版']")
+    # loginPage.switchToFrame(["#iframeUseApp"])
+    # loginPage.click("i.menu-info:contains('表单准备1')")
+    # loginPage.switchToFrame(["#iframeUseApp","#app-main-iframe"])
+    # loginPage.click("button:contains('添加')")
+    # loginPage.switchToWindowByName("表单准备1")
+    # loginPage.type("label:contains('单行文本')+div>input[type=text]","测试一下")
 
     # loginPage.click("div[title='表单中心']")
     # loginPage.switchToFrame(["#mainFrame"])
@@ -42,22 +50,23 @@ def test1():
     # loginPage.selectByValue("select","2")
     # loginPage.selectByText("select","选项1")
 
-    loginPage.move(loginPage.findElementByJQuery("div[title='社会化招聘2.0']"))
-    loginPage.move("i[title='简历获取']")
-    loginPage.move("i[title='投递简历']")
-    loginPage.click("i[title='投递简历']")
-    time.sleep(5)
+    # loginPage.move(loginPage.findElementByJQuery("div[title='社会化招聘2.0']"))
+    # loginPage.move("i[title='简历获取']")
+    # loginPage.move("i[title='投递简历']")
+    # loginPage.click("i[title='投递简历']")
+    # time.sleep(5)
+
     loginPage.close()
     loginPage.quit()
 
-
 def test2():
+    Browser().setDriver()
+    print(Browser().driver)
     loginPage = login.loginPage()
-    loginPage.loginUrl("https://pro.formtalk.net/login.do")
     """登录"""
     loginPage.login("18502827849","123456")
     loginPage.close()
     loginPage.quit()
 
 test1()
-# test2()
+test2()

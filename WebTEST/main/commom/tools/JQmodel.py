@@ -6,9 +6,13 @@
 # @Description    :
 
 from main.commom.init.Browser import Browser
+import time
+from main.commom.tools.log import log
 
 class JQModel():
 
+    logs = log.Log()
+    logger = logs.getlog(__name__)
 
     def injectJQueryIfNeeded(self):
         """
@@ -25,13 +29,13 @@ class JQModel():
         :return:True/False
         """
         try:
-            from main.commom.base.BasicPage import BasicPage
             hasJQuery = Browser().driver.execute_script("return typeof jQuery == 'function';")
             if hasJQuery == False:
-                print("页面未注入JQuery")
+                self.logger.debug("页面未注入JQuery")
         except Exception as e:
             hasJQuery = False
-            print("页面未注入JQuery")
+            self.logger.debug("页面未注入JQuery")
+        # print("JQuery:"+str(hasJQuery))
         return hasJQuery
 
     def injectjQuery(self):
@@ -44,9 +48,22 @@ class JQModel():
                                 'script.setAttribute("src","https://code.jquery.com/jquery-1.9.1.js");'
                                 'script.setAttribute("type","text/JavaScript");'
                                 'bod.appendChild(script)')
-        print("往页面注入JQuery")
+        self.logger.debug("往页面注入JQuery")
+        start = time.time()
+        start_milli_time = int(time.time()*1000)
+        timeout = 20*1000
+        while int(time.time()*1000) - start_milli_time <= timeout:
+            time.sleep(float(0.5))
+            if (self.isJQueryLoaded() == True):
+                break
+        if (self.isJQueryLoaded()):
+            self.logger.debug("页面注入JQuery成功,JQuery:"+str(self.isJQueryLoaded()))
+        else:
+            self.logger.debug("页面注入JQuery失败")
+        self.logger.debug("耗时：%sS" % (time.time() - start))
+
 
 
 
 if __name__ == "__main__":
-    run_code = 0
+    run_code = JQModel()

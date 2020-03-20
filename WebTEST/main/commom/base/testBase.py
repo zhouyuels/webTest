@@ -6,21 +6,14 @@
 # @Description    :测试用例基础设置，每个测试用例均继承该类
 
 import unittest,json,time, traceback
-from main.commom.tools.log import log
-import main.pages.LoginPage as login
 import warnings
 from main.commom.init.Browser import Browser
-# from common.keywords import decorator
+from main.commom.base.BasicPage import BasicPage
 
-
-
-class testBase(unittest.TestCase):
+class testBase(unittest.TestCase,BasicPage):
     """
     测试用例基础设置
     """
-
-    logs = log.Log()
-    logger = logs.getlog()
 
     @classmethod
     def setUpClass(cls):

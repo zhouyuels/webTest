@@ -8,6 +8,7 @@
 import unittest
 import main.commom.base.testBase as testBase
 import main.pages.LoginPage as login
+import main.pages.MainPage as Main
 from main.commom.tools import decorator
 
 
@@ -20,8 +21,10 @@ class Login(testBase.testBase):
         """正确登录"""
         loginPage = login.loginPage()
         loginPage.login("18502827849", "123456")
-        msg = loginPage.findElementByJQuery("div[title='首页']")
-        self.assertIsNotNone(msg)
+        msg = loginPage.findElementByJQuery("li:contains('首页')")
+        MainPage = Main.mainPage()
+        MainPage.test()
+        self.assertIsNotNone(msg,"登录失败，未找到【首页】标题")
 
     @decorator.Call_CaseName("【用户名错误，密码正确】用例")
     @unittest.skipIf(True,"是否执行")
@@ -46,7 +49,7 @@ class Login(testBase.testBase):
 
 
     @decorator.Call_CaseName("【用户名正确，密码错误】用例")
-    @unittest.skipIf(False,"是否执行")
+    @unittest.skipIf(True,"是否执行")
     def test03_PdError(self):
         """用户名正确，密码错误"""
         loginPage = login.loginPage()
@@ -67,9 +70,9 @@ class Login(testBase.testBase):
         loginPage = login.loginPage()
         loginPage.login("18502827848", "1234567")
         error = loginPage.getTest("#login_error")
+        MainPage = Main.mainPage()
+        MainPage.test()
         self.assertEqual(error , "用户名或密码错误","用户、密码错误提示")
-
-
 
 
 if __name__=='__main__':

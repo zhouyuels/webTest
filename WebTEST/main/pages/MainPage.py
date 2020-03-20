@@ -9,8 +9,10 @@ from main.commom.base.BasicPage import BasicPage
 
 class mainPage(BasicPage):
 
-    def qwe(self):
-        print("123456789")
+    logger = BasicPage.logs.getlog(__name__)
+
+    def test(self):
+        self.logger.debug("Log_Test")
 
 if __name__ == "__main__":
     aa =123
