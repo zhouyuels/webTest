@@ -153,8 +153,8 @@ class BasicPage():
             els_list = func(*args)
             time.sleep(float(0.1))
             if len(els_list) != 0:
-                return els_list
-        return  None
+                break
+        return  els_list
 
     def findElementByJQuery(self , selector, timeout_seconds = FIND_ELEMENT_TIMEOUT_IN_SECONDS):
         """

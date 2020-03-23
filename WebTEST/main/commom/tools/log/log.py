@@ -16,6 +16,13 @@ class Log():
     """
     初始化日志设置，通过读取日志配置文件初始化日志
     """
+
+    """屏蔽这些库的默认日志"""
+    logging.getLogger("requests").setLevel(logging.WARNING)
+    logging.getLogger("elasticsearch").setLevel(logging.WARNING)
+    logging.getLogger("urllib3").setLevel(logging.WARNING)
+    logging.getLogger("selenium").setLevel(logging.WARNING)
+
     """读取日志配置文件内容"""
     path = os.path.abspath(os.path.join(os.path.abspath(__file__), "../../../../config/configFile/Log.ini"))
     logging.config.fileConfig(path)

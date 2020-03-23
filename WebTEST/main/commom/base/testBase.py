@@ -5,15 +5,17 @@
 # @Author    :ZhouYue
 # @Description    :测试用例基础设置，每个测试用例均继承该类
 
-import unittest,json,time, traceback
+import unittest
 import warnings
 from main.commom.init.Browser import Browser
 from main.commom.base.BasicPage import BasicPage
+from main.commom.tools import ExceptionHandling
 
 class testBase(unittest.TestCase,BasicPage):
     """
     测试用例基础设置
     """
+    logEr = ExceptionHandling.ExceptionHandling()
 
     @classmethod
     def setUpClass(cls):

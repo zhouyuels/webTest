@@ -11,7 +11,6 @@ import main.pages.LoginPage as login
 import main.pages.MainPage as Main
 from main.commom.tools import decorator
 
-
 class Login(testBase.testBase):
     """登录测试"""
 
@@ -20,11 +19,11 @@ class Login(testBase.testBase):
     def test01_Success(self):
         """正确登录"""
         loginPage = login.loginPage()
-        loginPage.login("18502827849", "123456")
+        loginPage.login("18502827849", "1234561")
         msg = loginPage.findElementByJQuery("li:contains('首页')")
         MainPage = Main.mainPage()
         MainPage.test()
-        self.assertIsNotNone(msg,"登录失败，未找到【首页】标题")
+        self.logEr.AssertIsNotNone(msg , "登录失败，未找到【首页】标题" , loginPage)
 
     @decorator.Call_CaseName("【用户名错误，密码正确】用例")
     @unittest.skipIf(True,"是否执行")
@@ -72,7 +71,7 @@ class Login(testBase.testBase):
         error = loginPage.getTest("#login_error")
         MainPage = Main.mainPage()
         MainPage.test()
-        self.assertEqual(error , "用户名或密码错误","用户、密码错误提示")
+        self.logEr.AssertEqual(error, "用户名或密码错误", "用户、密码错误提示",loginPage)
 
 
 if __name__=='__main__':
