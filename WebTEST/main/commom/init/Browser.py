@@ -9,8 +9,13 @@ import os
 from selenium import webdriver
 from main.config.readconfig import Readconfig
 from main.commom.init.globalvar import globalvar
+from main.commom.tools.log import log
 
 class Browser():
+
+    logs = log.Log()
+    logger = logs.getlog()
+
     """
     获取浏览器驱动
     """
@@ -18,6 +23,10 @@ class Browser():
     path = os.path.split(os.path.realpath(__file__))[0]
     setupPath = os.path.join(path, "../../config/configFile/SetUp.ini")
     browser = Readconfig(setupPath).get_value("BROWSER", "browser")
+    option = webdriver.ChromeOptions()
+    option.add_argument('headless')
+    driver = webdriver.Chrome(globalvar().DriverPath(browser),chrome_options=option)
+
     # try:
     #     if browser == "Ie":
     #         driver = webdriver.Ie(globalvar().DriverPath(browser))

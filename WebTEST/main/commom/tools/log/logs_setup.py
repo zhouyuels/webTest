@@ -8,15 +8,16 @@
 
 import time,os,sys
 from configparser import ConfigParser
+from main.commom.tools.log import log
 
 class Logs_setup():
     """
     初始化配置日志路径及名称
     """
-
     def __init__(self):
         """获取日志配置文件路径"""
         self.path = os.path.abspath(os.path.join(os.path.abspath(__file__), "../../../../config/configFile/Log.ini"))
+        print(self.path)
 
     def set_logsName(self,log_path,logs_name):
         """设置日日志初始化信息
@@ -32,12 +33,9 @@ class Logs_setup():
         config.set("handler_file", "args", set_args)
         with open(self.path, "w+") as f:
             config.write(f)
-        from main.commom.tools.log import log
         logs = log.Log()
-        logger = logs.getlog(__name__)
-        logger.debug(self.path)
-        logger.info(u"日志文件路径问：%s" % log_path)
-        logger.info(u"日志文件名称为：%s" % logs_name)
+        logs.logger.info(u"日志文件路径问：%s" % log_path)
+        logs.logger.info(u"日志文件名称为：%s" % logs_name)
 
 if __name__ == '__main__':
 

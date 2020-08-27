@@ -6,13 +6,14 @@
 
 from main.commom.base.BasicPage import BasicPage
 import time
+from main.data import static_variable
 
 class loginPage(BasicPage):
     """
     登录页面
     """
 
-    URL = "https://testpro.formtalk.net/login.do"
+    URL = static_variable.address
 
     VERIFY_CODE_ICON = "span.verifyCode-icon:visible"
     """验证码按钮"""
@@ -55,9 +56,9 @@ class loginPage(BasicPage):
         self.waitForPageLoad()
         start_milli_time = int(time.time()*1000)
         timeout = 10*1000
+        login = False
         while int(time.time()*1000) - start_milli_time <= timeout:
             window = self.getTitle()
-            login = False
             if "云端应用自定义构建平台" in window:
                 login = True
                 break

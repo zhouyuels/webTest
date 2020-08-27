@@ -13,7 +13,7 @@ class globalvar():
     logs = log.Log()
     logger = logs.getlog()
 
-    def DriverPath(self,browser = "Ie"):
+    def DriverPath(self,browser = "Chrome"):
         """设置浏览器,默认为IE浏览器
 
         :param

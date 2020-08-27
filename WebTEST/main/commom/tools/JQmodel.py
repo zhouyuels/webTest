@@ -45,7 +45,8 @@ class JQModel():
         """
         Browser().driver.execute_script('var bod = document.getElementsByTagName("body")[0];'
                                 'var script = document.createElement("script");'
-                                'script.setAttribute("src","https://code.jquery.com/jquery-1.9.1.js");'
+                                # 'script.setAttribute("src","http://code.jquery.com/jquery-1.9.1.js");'
+                                'script.setAttribute("src","https://libs.baidu.com/jquery/1.9.1/jquery.min.js");'
                                 'script.setAttribute("type","text/JavaScript");'
                                 'bod.appendChild(script)')
         self.logger.debug("往页面注入JQuery")

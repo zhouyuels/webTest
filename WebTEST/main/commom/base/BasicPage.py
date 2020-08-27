@@ -43,8 +43,8 @@ class BasicPage():
 
     def __init__(self):
         # self.driver = driver
-        self.driver = Browser().driver
-        # self.driver = Browser().getDriver()
+        # self.driver = Browser().driver
+        self.driver = Browser().getDriver()
         # self.driver = webdriver.Ie(r'E:\automation_git\FormTalk\WebTEST\main\drivers\IEDriverServer.exe')
 
     def openUrl(self,url):
@@ -153,8 +153,8 @@ class BasicPage():
             els_list = func(*args)
             time.sleep(float(0.1))
             if len(els_list) != 0:
-                break
-        return  els_list
+                return els_list
+        return  None
 
     def findElementByJQuery(self , selector, timeout_seconds = FIND_ELEMENT_TIMEOUT_IN_SECONDS):
         """
@@ -472,26 +472,25 @@ class BasicPage():
         self.flash(el)
         el.click()
 
-    def clickByJs(self,arg):
+    def clickByJs(self,arg,timeout_seconds = FIND_ELEMENT_TIMEOUT_IN_SECONDS):
         """
         点击元素
 
         :Args:
          - arg: 元素参数，可为Selector元素选择器，或WebElement元素
+         - timeout_seconds: 超时时间
         :Usage:
             clickByJs(el)，clickByJs('#id')
         """
-        if isinstance(arg,str):
-            el = self.findElementByJQuery(arg)
-            Js = 'document.querySelectorAll("%s")[0].click();' % arg
-            self.focus(el)
-            self.flash(el)
-            self.executescript(Js)
+        #     Js = 'document.querySelectorAll("%s")[0].click();' % arg
         if isinstance(arg,webdriver.remote.webelement.WebElement):
-            Js = 'arguments[0].click();'
-            self.focus(arg)
-            self.flash(arg)
-            self.executescript(Js,arg)
+            el = arg
+        else:
+            el = self.findElementByJQuery(arg,timeout_seconds)
+        Js = 'arguments[0].click();'
+        self.focus(el)
+        self.flash(el)
+        self.executescript(Js,el)
 
     def doubleclick(self,arg):
         """
@@ -788,13 +787,13 @@ class BasicPage():
         self.waitForPageLoad()
         self.logger.debug(f"已切换至上一层frame/iframe ")
 
-    def switchToFrame(self,frameList = None):
+    def switchToFrameList(self, frameList = None):
         """切换到指定的frame
 
         :Args:
          - frameList: frame/iframe列表，按层级关系从做往右，若为[]或None，则切换到主页面，可为Selector元素选择器，或WebElement元素
         :Usage:
-            switchToFrame(["#frame1",".frame2",frame3]
+            switchToFrameList(["#frame1",".frame2",frame3]
         """
         assert isinstance(frameList,list) or frameList == None, "frameList必须为一个list或None"
         self.switchMainFrame()
@@ -812,6 +811,21 @@ class BasicPage():
                     self.logger.debug("已切换到frame:%s " % frameList[i])
                 except Exception as e:
                     self.logger.error("切换frame失败：%s " % e)
+
+    def switchToFrames(self,frames = None):
+        """切换到指定的frame
+
+        :Args:
+         - frames: 多层frame的selector，按层级关系从做往右，默认None；为Selector元素选择器，
+         以“->”分开不同层级的frame
+        :Usage:
+            switchToFrames(["frame1->frame2"]
+        """
+        if frames == None:
+            FrameList = frames
+        else:
+            FrameList = frames.split("->")
+        self.switchToFrameList(FrameList)
 
     """----------------------------------------窗口操作----------------------------------------------"""
 
@@ -907,7 +921,6 @@ class BasicPage():
             time_end = time.time()
             if int(time_end - time_start) > timeoutInSeconds:
                 raise Exception(f"页面加载超时：{self.SWITCH_FRAME_TIMEOUT_IN_SECONDS}秒")
-
 
 if __name__ == "__main__":
     run = BasicPage()

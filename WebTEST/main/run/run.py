@@ -8,7 +8,7 @@
 import time,os
 from HTMLTestRunner import HTMLTestRunner
 import unittest
-from main.commom.tools.log import logs_setup
+from main.commom.tools.log import log,logs_setup
 
 class Run():
 
@@ -45,7 +45,6 @@ class Run():
         并将查找到的测试用例组装到测试套件，因此可以直接通过run()方法执行discover
         :return:
         """
-        from main.commom.tools.log import log
         logs = log.Log()
         logger = logs.getlog()
         #匹配测试用例后加载用例
